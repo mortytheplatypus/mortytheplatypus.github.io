@@ -1,5 +1,14 @@
 /* Global Styles */
 
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">
+	<style>
+	body {
+	  font-family: "Lexend", serif;
+	}
+	</style>
+</head>
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
