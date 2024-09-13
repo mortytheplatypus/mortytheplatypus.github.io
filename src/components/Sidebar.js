@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Box, Typography, IconButton, Link } from '@mui/material';
+import { Avatar, Box, Typography, IconButton, Link, Container, Grid } from '@mui/material';
 
 function Sidebar() {
     return (
@@ -16,7 +16,7 @@ function Sidebar() {
             }}
         >
             <Avatar
-                src="al-amru-bil-maruf.jpg"
+                src="./images/al-amru-bil-maruf.jpg"
                 alt="Al Amru Bil Maruf"
                 sx={{ width: 250, height: 250, mt: 5, mb: 4 }}
             />
@@ -26,27 +26,27 @@ function Sidebar() {
             </Typography>
 
             <Typography variant="body1" >
-                Software Engineer at <Link href="https://www.synesisit.com.bd/" target="_blank" sx={{ textDecorationColor: 'inherit', color: 'inherit' }}>Synesis IT</Link>
+                Software Engineer at <Link href="https://www.synesisit.com.bd/" target="_blank" sx={{ textDecorationColor: 'inherit', color: 'inherit', textDecoration: 'none' }}><b>Synesis IT</b></Link>
             </Typography>
             <Typography variant="body1" >
                 BSc in Computer Science and Engineering
             </Typography>
-
-            <Box sx={{ mt: 2, textAlign: 'right', width: '100%' }}>
+            
+            <Box sx={{ mt: 3, pr: 0, textAlign: 'right', width: '95%' }}>
                 <Typography variant="body2" >
-                    <Link href="https://www.buet.ac.bd/" target="_blank" sx={{ textDecorationColor: 'inherit', color: 'inherit' }}>Bangladesh University of Engineering and Technology</Link>
+                    <Link href="https://www.buet.ac.bd/" target="_blank" sx={{ textDecorationColor: 'inherit', color: 'inherit', textDecoration: 'none' }}><b>Bangladesh University of Engineering and Technology</b></Link>
                 </Typography>
 
                 <Typography variant="body2" >
-                    <Link href="https://dinajpurgovtcollege.edu.bd/" target="_blank" sx={{ textDecorationColor: 'inherit', color: 'inherit' }}>Dinajpur Government College</Link>
+                    <Link href="https://dinajpurgovtcollege.edu.bd/" target="_blank" sx={{ textDecorationColor: 'inherit', color: 'inherit', textDecoration: 'none' }}><b>Dinajpur Government College</b></Link>
                 </Typography>
 
                 <Typography variant="body2" >
-                    <Link href="https://dinajpurzillaschool.edu.bd/" target="_blank" sx={{ textDecorationColor: 'inherit', color: 'inherit' }}>Dinajpur Zilla School</Link>
+                    <Link href="https://dinajpurzillaschool.edu.bd/" target="_blank" sx={{ textDecorationColor: 'inherit', color: 'inherit', textDecoration: 'none' }}><b>Dinajpur Zilla School</b></Link>
                 </Typography>
             </Box>
 
-            <Box sx={{ mt: 2 }}>
+            <Box sx={{ mt: 3 }}>
                 <IconButton component={Link} href="https://linkedin.com/in/mortytheplatypus" target="_blank" aria-label="LinkedIn">
                     <img src="/icons/linkedin.png" alt="LinkedIn" width={32} height={32} />
                 </IconButton>

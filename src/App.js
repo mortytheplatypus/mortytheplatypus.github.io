@@ -1,19 +1,25 @@
-import { Container, Grid } from '@mui/material';
-import Sidebar from './components/Sidebar';
-import MainContent from './components/MainContent';
+import './App.css';
+import React from 'react';
+import { useState, useEffect } from 'react';
+import Loader from './components/Loader';
+import Main from './components/Main';
+import { Padding } from '@mui/icons-material';
 
 function App() {
+  const [loading , setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <Container style={{  }}>
-      <Grid container spacing={2.5} sx={{ display: 'flex' }}>
-        <Grid item xs={12} md={4} sx={{ p: 2.5 }}>
-          <Sidebar />
-        </Grid>
-        <Grid item xs={12} md={8} sx={{ p: 2.5}}>
-          <MainContent />
-        </Grid>
-      </Grid>
-    </Container>
+    <div style = {{height: "100vh", width: "100vw"}}>
+      {
+        loading ? <Loader /> : <Main />
+      } 
+    </div>
   );
 }
 
