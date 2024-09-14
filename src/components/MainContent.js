@@ -51,6 +51,7 @@ function MainContent() {
         borderRadius: 1,
         boxShadow: 1,
         fontFamily: 'Gill Sans, sans-serif',
+        height: '90vh'
       }}
     >
       <AppBar position="static" sx={{ width: '100%', borderRadius: 1, mb: 2, bgcolor: "#021526" }}>

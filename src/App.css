@@ -1,4 +1,12 @@
-
+#root {
+    /* min-height: 100vh; */
+    height: 100%;
+    background-image: url('../public/background.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents repeating of the image */ 
+    background-attachment: fixed; /* Makes the background stay fixed during scroll */
+}
 
 body {
     height: 100%;

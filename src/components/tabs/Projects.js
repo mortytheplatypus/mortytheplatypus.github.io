@@ -4,8 +4,9 @@ import { Box, Typography, Grid } from '@mui/material';
 function Projects() {
   return (
     <>
+      Projects Content
       {/* Recent Projects */}
-      <Typography variant="h5" component="h2" gutterBottom>
+      {/* <Typography variant="h5" component="h2" gutterBottom>
         Recent Projects
       </Typography>
       <Grid container spacing={3}>
@@ -33,7 +34,7 @@ function Projects() {
             </Typography>
           </Box>
         </Grid>
-      </Grid>
+      </Grid> */}
     </>
   );
 }
