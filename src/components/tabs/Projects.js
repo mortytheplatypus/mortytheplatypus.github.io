@@ -1,10 +1,23 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Grid } from "@mui/material";
+import Construction from "../Construction";
 
 function Projects() {
   return (
     <>
-      Projects Content
+      <Grid
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Construction />
+
+        <h2>Oh, wait! I forgot to finish most of them. :)</h2>
+      </Grid>
+
       {/* Recent Projects */}
       {/* <Typography variant="h5" component="h2" gutterBottom>
         Recent Projects
