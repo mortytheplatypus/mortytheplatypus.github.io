@@ -69,30 +69,12 @@ function Home() {
         ))}
       </Box>
 
-      {/* GitHub Stats */}
-      {/* <Typography variant="h5" component="h2" gutterBottom sx={{ mt: 4 }}>
-        📊 GitHub Stats
-      </Typography>
-      <Box sx={{ mt: 2 }}>
-        <img 
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=mortytheplatypus&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" 
-          alt="Top Languages" 
-          style={{ width: '100%', borderRadius: '8px' }}
-        />
-      </Box> */}
-      {/* <br/> */}
-
-      {/* Fun Quote */}
-      {/* <Typography variant="body2" paragraph sx={{ mt: 4.8, fontStyle: 'italic', color: '#444444' }}>
-        "When I wrote this code, only God and I understood what I did. Now only God knows." - Anonymous
-      </Typography> */}
-
       <Box
         sx={{
           fontSize: "0.8rem",
           fontFamily: "'Georgia', serif",
           fontStyle: "italic",
-          mt: 4,
+          mt: 6,
         }}
       >
         🧠 Have you ever wondered why you haven't seen batman and me in the same

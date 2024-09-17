@@ -19,9 +19,9 @@ function Main() {
           md={4}
           lg={3.5}
           sx={{
-            display: 'flex', 
-            flexDirection: 'column',
-            justifyContent: 'space-between',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
             pl: { xs: 1, sm: 2, md: 2.5 },
             pr: { xs: 1, sm: 2, md: 1.5 },
           }}

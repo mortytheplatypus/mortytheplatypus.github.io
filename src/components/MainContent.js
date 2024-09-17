@@ -1,12 +1,18 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
-import { AppBar, Toolbar, Tabs, Tab, Container, Box } from '@mui/material';
-import Home from './tabs/Home';
-import Academics from './tabs/Academics';
-import Skills from './tabs/Skills';
-import Projects from './tabs/Projects';
-import Hobbies from './tabs/Hobbies';
-import Others from './tabs/Others';
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  useLocation,
+} from "react-router-dom";
+import { AppBar, Toolbar, Tabs, Tab, Container, Box } from "@mui/material";
+import Home from "./tabs/Home";
+import Academics from "./tabs/Academics";
+import Skills from "./tabs/Skills";
+import Projects from "./tabs/Projects";
+import Hobbies from "./tabs/Hobbies";
+import Others from "./tabs/Others";
 
 function MainContent() {
   const [value, setValue] = React.useState(0);
@@ -14,19 +20,19 @@ function MainContent() {
 
   useEffect(() => {
     switch (location.pathname) {
-      case '/academics':
+      case "/academics":
         setValue(1);
         break;
-      case '/skills':
+      case "/skills":
         setValue(2);
         break;
-      case '/projects':
+      case "/projects":
         setValue(3);
         break;
-      case '/hobbies':
+      case "/hobbies":
         setValue(4);
         break;
-      case '/others':
+      case "/others":
         setValue(5);
         break;
       default:
@@ -38,66 +44,100 @@ function MainContent() {
     setValue(newValue);
   };
 
+  const bgColorMain = "#EAEADD";
+  const appBarColor = "#021526";
+
   return (
-    
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         p: 2,
         mt: 2,
-        bgcolor: '#E2E2B6',
+        bgcolor: bgColorMain,
         borderRadius: 1,
         boxShadow: 1,
-        fontFamily: 'Gill Sans, sans-serif',
-        height: '90vh'
+        fontFamily: "Gill Sans, sans-serif",
+        height: "90vh",
       }}
     >
-      <AppBar position="static" sx={{ width: '100%', borderRadius: 1, mb: 2, bgcolor: "#021526" }}>
-        <Toolbar sx={{ justifyContent: 'center' }}>
-          <Tabs value={value} onChange={handleChange} variant="fullWidth" TabIndicatorProps={{ style: { backgroundColor: '#E2E2B6' } }}>
+      <AppBar
+        position="static"
+        sx={{ width: "100%", borderRadius: 1, mb: 2, bgcolor: appBarColor }}
+      >
+        <Toolbar sx={{ justifyContent: "center" }}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="fullWidth"
+            TabIndicatorProps={{ style: { backgroundColor: bgColorMain } }}
+          >
             <Tab
               label="Home"
               component={Link}
               to="/"
-              sx={{ fontWeight: value === 0 ? 'bold' : 'normal', color: '#E2E2B6', '&.Mui-selected': { color: '#F2F2C6' } }}
+              sx={{
+                fontWeight: value === 0 ? "bold" : "normal",
+                color: bgColorMain,
+                "&.Mui-selected": { color: bgColorMain },
+              }}
             />
             <Tab
               label="Academics"
               component={Link}
               to="/academics"
-              sx={{ fontWeight: value === 1 ? 'bold' : 'normal', color: '#E2E2B6', '&.Mui-selected': { color: '#F2F2C6' } }}
+              sx={{
+                fontWeight: value === 1 ? "bold" : "normal",
+                color: bgColorMain,
+                "&.Mui-selected": { color: bgColorMain },
+              }}
             />
             <Tab
               label="Skills"
               component={Link}
               to="/skills"
-              sx={{ fontWeight: value === 2 ? 'bold' : 'normal', color: '#E2E2B6', '&.Mui-selected': { color: '#F2F2C6' } }}
+              sx={{
+                fontWeight: value === 2 ? "bold" : "normal",
+                color: bgColorMain,
+                "&.Mui-selected": { color: bgColorMain },
+              }}
             />
             <Tab
               label="Projects"
               component={Link}
               to="/projects"
-              sx={{ fontWeight: value === 3 ? 'bold' : 'normal', color: '#E2E2B6', '&.Mui-selected': { color: '#F2F2C6' } }}
+              sx={{
+                fontWeight: value === 3 ? "bold" : "normal",
+                color: bgColorMain,
+                "&.Mui-selected": { color: bgColorMain },
+              }}
             />
             <Tab
               label="Hobbies"
               component={Link}
               to="/hobbies"
-              sx={{ fontWeight: value === 4 ? 'bold' : 'normal', color: '#E2E2B6', '&.Mui-selected': { color: '#F2F2C6' } }}
+              sx={{
+                fontWeight: value === 4 ? "bold" : "normal",
+                color: bgColorMain,
+                "&.Mui-selected": { color: bgColorMain },
+              }}
             />
             <Tab
               label="Others"
               component={Link}
               to="/others"
-              sx={{ fontWeight: value === 5 ? 'bold' : 'normal', color: '#E2E2B6', '&.Mui-selected': { color: '#F2F2C6' } }}
+              sx={{
+                fontWeight: value === 5 ? "bold" : "normal",
+                color: bgColorMain,
+                "&.Mui-selected": { color: bgColorMain },
+              }}
             />
           </Tabs>
         </Toolbar>
       </AppBar>
-      
-      <Box sx={{ width: '100%', mt: 2 }}>
+
+      <Box sx={{ width: "100%", mt: 2 }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/academics" element={<Academics />} />
@@ -108,7 +148,6 @@ function MainContent() {
         </Routes>
       </Box>
     </Box>
-    
   );
 }
 
