@@ -1,0 +1,244 @@
+.hobbies-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  height: calc(80vh);
+  overflow-y: auto;
+}
+
+.hobbies-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.hobbies-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.hobbies-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.hobbies-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.hobby-section {
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: var(--secondary-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hobby-section:hover {
+  transform: translateY(-5px);
+}
+
+.hobby-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-right: 15px;
+}
+
+.hobby-section h2 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* Movie Section */
+.letterboxd-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.letterboxd-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.letterboxd-logo {
+  height: 30px;
+  filter: invert(1);
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.movie-card {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-card span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+}
+
+/* Sports Section */
+.sports-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.cricket-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Educational Content Section */
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.channel-card {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.channel-card:hover {
+  transform: translateY(-5px);
+}
+
+.channel-card h3 {
+  margin: 0 0 5px 0;
+  color: var(--text-color);
+}
+
+.channel-topic {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1000px) {
+  .sports-showcase,
+  .channel-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* Update Letterboxd section styles */
+.letterboxd-profile {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.letterboxd-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.letterboxd-logo {
+  height: 40px;
+  filter: invert(1);
+}
+
+.letterboxd-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.letterboxd-username {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.letterboxd-desc {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.letterboxd-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.letterboxd-button {
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.letterboxd-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}

@@ -1,87 +1,35 @@
 import React from "react";
-import { Box, Typography, Button, Grid, Chip } from "@mui/material";
+import "./Home.css";
+import { Avatar } from "@mui/material";
 
-function Home() {
+export const Home = () => {
   return (
-    <Box
-      sx={{
-        p: { xs: 2, sm: 3, md: 2 },
-        pt: 0,
-        maxWidth: "1000px",
-        margin: "0 auto",
-      }}
-    >
-      {/* Welcome Message */}
-      <Typography variant="h4" component="h1" gutterBottom>
-        Hi there 👋
-      </Typography>
-      <Typography variant="body1" paragraph>
-        🔭 I'm currently working as a Software Engineer and my work domain
-        revolves around developing video conferencing solutions.
-      </Typography>
-      <Typography variant="body1" paragraph>
-        ⚡ I'm looking to collaborate on ML research projects.
-      </Typography>
-      <Typography variant="body1" paragraph>
-        🌱 Reach me, and we'll talk about movies all day! Check out my
-        <a
-          href="https://letterboxd.com/theblueduck"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: "#2C343F",
-            textDecoration: "none",
-            marginLeft: "4px",
-            fontWeight: "bold",
-          }}
-        >
-          Letterboxd
-        </a>
-        !
-      </Typography>
-      <br />
+    <div className="home-container">
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1>Hello! This is Al Amru Bil Maruf</h1> 
 
-      {/* Skills Section */}
-      <Typography variant="h5" component="h2" gutterBottom sx={{ mt: 4 }}>
-        💻 Tech Stack
-      </Typography>
-      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-        {[
-          "C/C++",
-          "JavaScript",
-          "Python",
-          "Java",
-          "Bash",
-          "React",
-          "Next",
-          "Node.js",
-          "Express.js",
-          "Spring Boot",
-          "Docker",
-          "MongoDB",
-          "Postgres",
-          "MySQL",
-          "MUI",
-          "Git",
-          "TailwindCSS",
-        ].map((tech) => (
-          <Chip label={tech} key={tech} sx={{ margin: 0.5 }} />
-        ))}
-      </Box>
+          <p>
+            I am a full-stack developer based in Dhaka, Bangladesh. My work domain currently revolves around developing video conferincing solutions. I am open for collaborative research work. 
+            I am constantly trying to learn new technologies and best practices. My core focus is on creating efficient, maintainable and scalable code.
+          </p>
 
-      <Box
-        sx={{
-          fontSize: "0.8rem",
-          fontFamily: "'Georgia', serif",
-          fontStyle: "italic",
-          mt: 6,
-        }}
-      >
-        🧠 Have you ever wondered why you haven't seen batman and me in the same
-        room together?
-      </Box>
-    </Box>
+          <p>
+            Reach me through my socials!
+          </p>
+        </div>
+        <div className="profile-image">
+          <Avatar
+            src="./images/al-amru-bil-maruf.jpg"
+            alt="Al Amru Bil Maruf"
+            sx={{ width: 250, height: 250 }}
+          />
+        </div>
+      </section>
+
+      <section >
+        <h2 className="batman">Have you ever wondered why you haven't seen batman and me in the same room? 🦇</h2>
+      </section>
+    </div>
   );
-}
-
-export default Home;
+};

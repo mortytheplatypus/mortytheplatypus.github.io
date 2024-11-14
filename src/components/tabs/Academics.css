@@ -1,0 +1,112 @@
+.academics-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  height: calc(80vh);
+  overflow-y: auto;
+}
+
+.academics-container h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.academics-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.academics-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.academics-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.academics-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #e0e0e0;
+}
+
+.education-card {
+  position: relative;
+  padding: 1.5rem 0 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 2rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #666;
+}
+
+.education-card:hover::before {
+  background-color: #666;
+}
+
+.period {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.education-card h2 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.degree {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .academics-container {
+    padding: 1rem;
+  }
+  
+  .timeline::before {
+    left: 1rem;
+  }
+  
+  .education-card {
+    padding-left: 3rem;
+  }
+  
+  .education-card::before {
+    left: calc(1rem - 5px);
+  }
+} 
