@@ -15,7 +15,6 @@ export const Writeups = () => {
   return (
     <div className="writeups-container">
       <div className="writeups-header">
-        <h2>Technical Writeups</h2>
       </div>
       <div className="articles-grid">
         {articles.map((article, index) => (

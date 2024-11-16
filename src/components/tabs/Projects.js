@@ -1,6 +1,5 @@
 import React from 'react';
 import './Projects.css';
-// import { FaGithub } from 'react-icons/fa';
 
 export const Projects = () => {
   const projects = [
@@ -36,13 +35,17 @@ export const Projects = () => {
 
   return (
     <div className="projects-container">
-      <h1>Projects</h1>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
+          <a 
+            key={index} 
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card"
+          >
             <div className="project-header">
               <h2>{project.title}</h2>
-              <span className="project-type">{project.type}</span>
             </div>
             <p className="project-description">{project.description}</p>
             <div className="tech-stack">
@@ -52,16 +55,11 @@ export const Projects = () => {
                 </span>
               ))}
             </div>
-            <a 
-              href={project.github} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              {/* <FaGithub />  */}
-              View on GitHub
-            </a>
-          </div>
+            <div className="card-footer">
+              <span className="project-type">{project.type}</span>
+              <img src="/icons/github.png" alt="GitHub" className="github-icon" />
+            </div>
+          </a>
         ))}
       </div>
     </div>

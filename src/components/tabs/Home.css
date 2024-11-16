@@ -21,11 +21,23 @@
 h1 {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
+  color: var(--primary-text);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-text);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--primary-text);
 }
 
 .intro-text {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--primary-text);
   margin-bottom: 1.5rem;
 }
 

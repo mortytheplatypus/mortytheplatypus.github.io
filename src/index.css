@@ -1,3 +1,12 @@
+:root {
+  --primary-bg: #F7F9F2;
+  --primary-text: #333333;
+  --primary-text-dark: #010101;
+  --secondary-bg: #ffffff;
+  --secondary-text: #666666;
+  --accent-color: #eaeaea;
+}
+
 body {
   margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Segoe UI', 'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

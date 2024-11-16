@@ -34,13 +34,11 @@ export const TabContainer = () => {
     setValue(newValue);
   };
 
-  const bgColorMain = "#010101";
-  const appBarColor = "#f8f9fa";
-
   return (
     <AppBar
       position="static"
-      sx={{ width: "80%", borderRadius: 1, bgcolor: appBarColor }}
+      elevation={0}
+      sx={{ width: "80%", borderRadius: 1, bgcolor: "var(--primary-bg)" }}
     >
       <Toolbar sx={{ justifyContent: "center" }}>
         <Tabs
@@ -56,9 +54,9 @@ export const TabContainer = () => {
             sx={{
               fontWeight: value === 0 ? "bold" : "normal",
               fontSize: value === 0 ? "0.95rem" : "0.8rem",
-              color: bgColorMain,
+              color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
-              "&.Mui-selected": { color: bgColorMain },
+              "&.Mui-selected": { color: "var(--primary-text-dark)" },
             }}
           />
           <Tab
@@ -68,9 +66,9 @@ export const TabContainer = () => {
             sx={{
               fontWeight: value === 1 ? "bold" : "normal",
               fontSize: value === 1 ? "0.95rem" : "0.8rem",
-              color: bgColorMain,
+              color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
-              "&.Mui-selected": { color: bgColorMain },
+              "&.Mui-selected": { color: "var(--primary-text-dark)" },
             }}
           />
           <Tab
@@ -80,9 +78,9 @@ export const TabContainer = () => {
             sx={{
               fontWeight: value === 2 ? "bold" : "normal",
               fontSize: value === 2 ? "0.95rem" : "0.8rem",
-              color: bgColorMain,
+              color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
-              "&.Mui-selected": { color: bgColorMain },
+              "&.Mui-selected": { color: "var(--primary-text-dark)" },
             }}
           />
           <Tab
@@ -92,9 +90,9 @@ export const TabContainer = () => {
             sx={{
               fontWeight: value === 3 ? "bold" : "normal",
               fontSize: value === 3 ? "0.95rem" : "0.8rem",
-              color: bgColorMain,
+              color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
-              "&.Mui-selected": { color: bgColorMain },
+              "&.Mui-selected": { color: "var(--primary-text-dark)" },
             }}
           />
           <Tab
@@ -104,9 +102,9 @@ export const TabContainer = () => {
             sx={{
               fontWeight: value === 4 ? "bold" : "normal",
               fontSize: value === 4 ? "0.95rem" : "0.8rem",
-              color: bgColorMain,
+              color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
-              "&.Mui-selected": { color: bgColorMain },
+              "&.Mui-selected": { color: "var(--primary-text-dark)" },
             }}
           />
         </Tabs>

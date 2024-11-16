@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #f8f9fa;
+    background-color: var(--primary-bg);
     width: 100%;
     height: 15vh;
     display: flex;
@@ -16,6 +16,7 @@
     width: 20%;
     height: 100%;
     font-family: monospace;
+    color: var(--primary-text);
 }
 
 .tabs {
@@ -27,7 +28,7 @@
 }
 
 .tab {
-    color: #f8f9fa;
+    color: var(--primary-text);
     font-size: 1.5rem;
     cursor: pointer;
 }

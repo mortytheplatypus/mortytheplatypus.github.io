@@ -1,8 +1,8 @@
 .footer {
   margin-top: auto;
   padding: 0.5rem 0;
-  background-color: #f8f9fa;
-  border-top: 1px solid #eaeaea;
+  background-color: var(--primary-bg);
+  border-top: 1px solid var(--accent-color);
 }
 
 .footer-content {
@@ -13,7 +13,7 @@
 }
 
 .footer-copyright {
-  color: #666;
+  color: var(--secondary-text);
   font-size: 0.8rem;
   margin: 0;
   line-height: 1;

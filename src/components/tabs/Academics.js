@@ -3,9 +3,7 @@ import './Academics.css';
 
 export const Academics = () => {
   return (
-    <div className="academics-container">
-      <h1>Academic Journey</h1>
-      
+    <div className="academics-container">      
       <div className="timeline">
         <div className="education-card">
           <div className="period">2019 - 2023</div>
