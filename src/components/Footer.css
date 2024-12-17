@@ -1,4 +1,5 @@
 .footer {
+  width: 100vw !important;
   margin-top: auto;
   padding: 0.5rem 0;
   background-color: var(--primary-bg);
