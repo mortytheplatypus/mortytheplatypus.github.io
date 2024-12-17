@@ -43,7 +43,7 @@
 }
 
 .article-card {
-  background-color: #efefea;
+  background-color: --accent-color;
   border-radius: 12px;
   padding: 20px;
   text-decoration: none;
