@@ -28,7 +28,7 @@ export const Home = () => {
       </section>
 
       <section >
-        <h2 className="batman">Have you ever wondered why you haven't seen batman and me in the same room? 🦇</h2>
+        <h2 className="batman">Have you ever wondered why you haven't seen the Batman and me in the same room? 🦇</h2>
       </section>
     </div>
   );

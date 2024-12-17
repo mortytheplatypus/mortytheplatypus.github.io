@@ -55,3 +55,36 @@ p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-style: italic;
 }
+
+/* Add media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-image {
+    flex: 0 0 auto;
+    height: auto;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .batman {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

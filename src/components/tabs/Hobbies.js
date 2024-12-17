@@ -6,12 +6,12 @@ export const Hobbies = () => {
     <div className="hobbies-container">
       <section className="hobby-section cinema">
         <div className="hobby-header">
-          <h2>Cinema Enthusiast</h2>
+          {/* <h2>Cinephile</h2> */}
         </div>
         <div className="letterboxd-showcase">
           <div className="letterboxd-profile">
             <div className="letterboxd-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            Check out my Letterboxd <a
+            Explore my cinephilia <a
                 href="https://letterboxd.com/theblueduck"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -29,13 +29,13 @@ export const Hobbies = () => {
               />
               <span>Metropolis</span>
             </a>
-            <a href="https://letterboxd.com/film/vertigo/" target="_blank" rel="noopener noreferrer" className="movie-card">
+            {/* <a href="https://letterboxd.com/film/vertigo/" target="_blank" rel="noopener noreferrer" className="movie-card">
               <img
                 src="https://m.media-amazon.com/images/M/MV5BYTE4ODEwZDUtNDFjOC00NjAxLWEzYTQtYTI1NGVmZmFlNjdiL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
                 alt="Vertigo"
               />
               <span>Vertigo</span>
-            </a>
+            </a> */}
             <a href="https://letterboxd.com/film/citizen-kane/" target="_blank" rel="noopener noreferrer" className="movie-card">
               <img
                 src="https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
@@ -63,7 +63,8 @@ export const Hobbies = () => {
 
       <section className="hobby-section sports">
         <div className="hobby-header">
-          <h2>Sports Fan</h2>
+          {/* <h2>Sports Enthusiast</h2> */}
+          I waste my leisures obsessing over these two teams
         </div>
         <div className="sports-showcase">
           <div className="team-card chelsea">
@@ -80,17 +81,17 @@ export const Hobbies = () => {
             />
             <span>Germany</span>
           </div>
-          <div className="team-card cricket">
+          {/* <div className="team-card cricket">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/3/3f/Cricket_Australia.png"
               alt="Cricket Australia"
             />
             <span>Cricket Australia</span>
-          </div>
+          </div> */}
         </div>
       </section>
 
-      <section className="hobby-section education">
+      {/* <section className="hobby-section education">
         <div className="hobby-header">
           <h2>Educational Content</h2>
         </div>
@@ -107,7 +108,7 @@ export const Hobbies = () => {
             </a>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

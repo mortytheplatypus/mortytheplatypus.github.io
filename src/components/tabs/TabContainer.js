@@ -38,13 +38,18 @@ export const TabContainer = () => {
     <AppBar
       position="static"
       elevation={0}
-      sx={{ width: "80%", borderRadius: 1, bgcolor: "var(--primary-bg)" }}
+      sx={{
+        width: { xs: "90%", sm: "80%" },
+        borderRadius: 1,
+        bgcolor: "var(--primary-bg)"
+      }}
     >
       <Toolbar sx={{ justifyContent: "center" }}>
         <Tabs
           value={value}
           onChange={handleChange}
-          variant="fullWidth"
+          variant="scrollable"
+          scrollButtons="auto"
           TabIndicatorProps={{ style: { display: "none" } }}
         >
           <Tab

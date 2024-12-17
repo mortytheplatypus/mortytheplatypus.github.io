@@ -81,12 +81,13 @@
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(5, 150px);
+  grid-template-columns: repeat(4, 150px);
   gap: 20px;
   justify-content: center;
 }
 
 .movie-card {
+  margin: 0.5rem;
   position: relative;
   aspect-ratio: 2/3;
   overflow: hidden;
@@ -118,13 +119,14 @@
 /* Sports Section */
 .sports-showcase {
   display: grid;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(2, 150px);
   gap: 20px;
   justify-content: center;
   background-color: var(--primary-bg);
 }
 
 .team-card {
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,4 +244,27 @@
 .letterboxd-button:hover {
   transform: translateY(-2px);
   opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .hobby-section {
+    padding: 15px;
+  }
+
+  .hobby-icon {
+    font-size: 1.5rem;
+  }
+
+  .hobby-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .channel-grid {
+    grid-template-columns: 1fr;
+  }
 }

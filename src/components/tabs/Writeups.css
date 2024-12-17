@@ -11,7 +11,7 @@
 }
 
 .writeups-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #fafafc;
 }
 
 .writeups-container::-webkit-scrollbar-thumb {
@@ -99,8 +99,25 @@
   font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .writeups-container {
+    padding: 1rem;
+  }
+
   .articles-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .writeups-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .article-card {
+    padding: 15px;
+  }
+
+  .article-card h3 {
+    font-size: 1.2rem;
   }
 } 
