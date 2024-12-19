@@ -126,12 +126,12 @@
 }
 
 .team-card {
+  background-color: --accent-color;
   margin: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  background: rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: transform 0.3s ease;
 }

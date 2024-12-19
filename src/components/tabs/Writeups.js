@@ -6,8 +6,16 @@ export const Writeups = () => {
     {
       title: "Spring Boot Profiling",
       description: "A comprehensive guide about configuring and using different profiles in Spring Boot applications",
-      link: "https://www.notion.so/Spring-Boot-Profiling-f6cce511e83a41ada33e5e98f3d8124e",
+      link: "https://feline-week-e64.notion.site/Spring-Boot-Profiling-f6cce511e83a41ada33e5e98f3d8124e?pvs=4",
       tags: ["Spring Boot", "Java", "Backend"],
+      date: "2024"
+    },
+    {
+      
+      title: "Building Microservices in Spring Boot",
+      description: "A beginner's guide on building microservices in Spring Boot with Eureka",
+      link: "https://feline-week-e64.notion.site/Building-Microservices-in-Spring-Boot-with-Eureka-1405ba87cb0b806ba922ed1f6d91f1f9?pvs=4",
+      tags: ["Spring Boot", "Java", "Micrservices"],
       date: "2024"
     }
   ];
