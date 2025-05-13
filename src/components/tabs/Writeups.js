@@ -17,6 +17,13 @@ export const Writeups = () => {
       link: "https://feline-week-e64.notion.site/Building-Microservices-in-Spring-Boot-with-Eureka-1405ba87cb0b806ba922ed1f6d91f1f9?pvs=4",
       tags: ["Spring Boot", "Java", "Micrservices"],
       date: "2024"
+    },
+    {
+      title: "Understanding JWTs",
+      description: "A detailed explanation of JSON Web Tokens (JWTs) and their creation process",
+      link: "https://www.notion.so/Understanding-JWTs-1cd5ba87cb0b8037b4bdc7029b39d4a5",
+      tags: ["JWT", "Encryption"],
+      date: "2025"
     }
   ];
 
