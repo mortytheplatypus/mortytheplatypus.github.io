@@ -1,9 +1,9 @@
 import React from 'react'
 import './Root.css'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Navbar } from './Navbar'
-import { Body } from './Body'
-import { Footer } from './Footer'
+import { Navbar } from '../navbar/Navbar'
+import { Body } from '../body/Body'
+import { Footer } from '../footer/Footer'
 
 export const Root = () => {
   return (

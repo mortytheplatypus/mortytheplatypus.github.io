@@ -74,11 +74,6 @@
   text-decoration: none;
 }
 
-.letterboxd-logo {
-  height: 30px;
-  filter: invert(1);
-}
-
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(4, 150px);

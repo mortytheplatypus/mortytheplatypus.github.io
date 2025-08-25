@@ -1,11 +1,11 @@
 import React from 'react'
 import './Body.css'
 import { Routes, Route } from 'react-router-dom'
-import { Home } from './tabs/Home'
-import { Academics } from './tabs/Academics'
-import { Projects } from './tabs/Projects'
-import { Hobbies } from './tabs/Hobbies'
-import { Writeups } from './tabs/Writeups'
+import { Home } from '../../tabs/home/Home'
+import { Academics } from '../../tabs/academics/Academics'
+import { Projects } from '../../tabs/projects/Projects'
+import { Hobbies } from '../../tabs/hobbies/Hobbies'
+import { Writeups } from '../../tabs/writeups/Writeups'
 
 export const Body = () => {
   return (

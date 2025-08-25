@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Box, IconButton, Link } from "@mui/material";
-import { TabContainer } from "./tabs/TabContainer";
+import { TabContainer } from "../TabContainer";
 
 export const Navbar = () => {
   return (

@@ -1,4 +1,3 @@
-import SplitText from "../SplitText";
 import "./Home.css";
 import { Avatar } from "@mui/material";
 
@@ -8,22 +7,7 @@ export const Home = () => {
       <section className="hero-section">
         <div className="hero-content">
 
-          <SplitText
-            text="Hello! This is Al Amru Bil Maruf"
-            className="text-4xl font-semibold text-center bg-red-500"
-            delay={100}
-            duration={0.1}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-            fontSize="2rem"
-            fontWeight="900"
-            onLetterAnimationComplete={() => { }}
-          />
+          <h1>Hey, there! This is Al Amru Bil Maruf!</h1>
 
           <p>
             I am a full-stack developer based in Dhaka, Bangladesh. My work domain currently revolves around developing video conferincing solutions. I am open for collaborative research work.

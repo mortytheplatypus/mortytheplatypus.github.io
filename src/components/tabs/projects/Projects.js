@@ -36,9 +36,9 @@ export const Projects = () => {
   return (
     <div className="projects-container">
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <a 
-            key={index} 
+            key={project.title} 
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -49,9 +49,9 @@ export const Projects = () => {
             </div>
             <p className="project-description">{project.description}</p>
             <div className="tech-stack">
-              {project.tech.map((tech, techIndex) => (
-                <span key={techIndex} className="tech-tag">
-                  {tech}
+              {project.tech.map((techTag) => (
+                <span key={techTag} className="tech-tag">
+                  {techTag}
                 </span>
               ))}
             </div>
