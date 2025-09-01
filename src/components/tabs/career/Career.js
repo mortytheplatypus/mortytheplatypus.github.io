@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./Academics.css";
+import "./Career.css";
 
 const experienceData = [
   {
     period: "May 2024 - Present",
     isCurrent: true,
-    position: "Software Engineer",
+    position: "Software Engineer I",
     company: "Synesis IT PLC",
     description:
       "Contributing to the full-stack development of Convay, a cutting-edge video conferencing platform. Leading feature development initiatives, implementing critical bug fixes, and driving code refactoring efforts while maintaining industry best practices to deliver exceptional user experiences.",
@@ -130,7 +130,7 @@ EducationCard.propTypes = {
   isFeatured: PropTypes.bool,
 };
 
-export const Academics = () => {
+export const Career = () => {
   const [activeTab, setActiveTab] = useState("experience");
 
   return (
