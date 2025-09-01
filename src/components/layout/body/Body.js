@@ -6,13 +6,14 @@ import { Academics } from '../../tabs/academics/Academics'
 import { Projects } from '../../tabs/projects/Projects'
 import { Hobbies } from '../../tabs/hobbies/Hobbies'
 import { Writeups } from '../../tabs/writeups/Writeups'
+import Resume from '../../tabs/resume/Resume'
 
 export const Body = () => {
   return (
     <div className='root-body'>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/resume" element={<Resume />} />
         <Route path="/career" element={<Academics />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/hobbies" element={<Hobbies />} />

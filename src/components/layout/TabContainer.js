@@ -8,9 +8,8 @@ export const TabContainer = () => {
 
   useEffect(() => {
     switch (location.pathname) {
-      case "/":
-      case "/home":
-        setValue(0);
+      case "/resume":
+        setValue(5);
         break;
       case "/career":
         setValue(1);
@@ -29,7 +28,7 @@ export const TabContainer = () => {
     }
   }, [location.pathname]);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (newValue) => {
     setValue(newValue);
   };
 
@@ -51,22 +50,22 @@ export const TabContainer = () => {
           scrollButtons="auto"
           TabIndicatorProps={{ style: { display: "none" } }}
         >
-          <Tab
-            label="Home"
-            component={Link}
-            to="/"
-            sx={{
-              fontWeight: value === 0 ? "bold" : "normal",
-              fontSize: value === 0 ? "0.95rem" : "0.8rem",
-              color: "var(--primary-text)",
-              fontFamily: "Gill Sans, sans-serif",
-              "&.Mui-selected": { color: "var(--primary-text-dark)" },
-              "&:hover": {
-                backgroundColor: "#EAEAE2",
-                borderRadius: "4px",
-              },
-            }}
-          />
+        <Tab
+          label="Resume"
+          component={Link}
+          to="/resume"
+          sx={{
+            fontWeight: value === 5 ? "bold" : "normal",
+            fontSize: value === 5 ? "0.95rem" : "0.8rem",
+            color: "var(--primary-text)",
+            fontFamily: "Gill Sans, sans-serif",
+            "&.Mui-selected": { color: "var(--primary-text-dark)" },
+            "&:hover": {
+              backgroundColor: "#EAEAE2",
+              borderRadius: "4px",
+            },
+          }}
+        />
           <Tab
             label="Career"
             component={Link}

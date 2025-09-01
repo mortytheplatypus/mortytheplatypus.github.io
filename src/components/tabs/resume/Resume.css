@@ -1,0 +1,86 @@
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 90vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.download-button {
+    background-color: #e5e5e5;
+    height: 1rem;
+    text-decoration: none;
+    color: #2d2f2f;
+    padding: 1rem;
+    border: 1px solid #2d2f2f;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #dadada;
+}
+
+.pdf-viewer {
+    width: 800px;
+    flex: 1;
+    max-height: calc(90vh - 150px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PDF Iframe Styling */
+.pdf-iframe {
+    width: 100%;
+    flex: 1;
+    border: none;
+    background-color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.pdf-iframe p {
+    padding: 3rem 2rem;
+    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+    color: var(--primary-text);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-iframe a {
+    color: var(--primary-text);
+    text-decoration: underline;
+    font-weight: 600;
+    font-family: 'Gill Sans', sans-serif;
+    transition: color 0.3s ease;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-iframe a:hover {
+    color: var(--primary-text-dark);
+    background-color: #f0f0f0;
+}

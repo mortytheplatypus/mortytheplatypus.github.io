@@ -6,9 +6,11 @@ import { TabContainer } from "../TabContainer";
 export const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="hello">
+      <button className="hello" onClick={() => {
+        window.location.href = "/";
+      }}>
         mortytheplatypus
-      </div>
+      </button>
 
       <div className="tabs">
         <TabContainer />

@@ -11,13 +11,22 @@
 
 .hello {
     font-size: 1rem;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 20%;
     height: 100%;
     font-family: monospace;
+    cursor: pointer;
     color: var(--primary-text);
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.hello:hover {
+    color: var(--secondary-text)
 }
 
 @media screen and (max-width: 768px) {
