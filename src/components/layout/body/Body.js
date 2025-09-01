@@ -13,7 +13,7 @@ export const Body = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/home" element={<Home />} />
-        <Route path="/academics" element={<Academics />} />
+        <Route path="/career" element={<Academics />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/hobbies" element={<Hobbies />} />
         <Route path="/writeups" element={<Writeups />} />

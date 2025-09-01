@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Academics.css";
 
@@ -131,57 +131,82 @@ EducationCard.propTypes = {
 };
 
 export const Academics = () => {
+  const [activeTab, setActiveTab] = useState("experience");
+
   return (
     <div className="academics-container">
       <div className="journey-content">
-        {/* Work Experience Section */}
-        <section className="section-block">
-          <div className="section-header">
-            <div className="section-icon work-icon">💼</div>
-            <h2>Work Experience</h2>
-          </div>
+        {/* Tab Navigation */}
+        <div className="tab-navigation">
+          <button
+            className={`tab-button ${activeTab === "experience" ? "active" : ""}`}
+            onClick={() => setActiveTab("experience")}
+          >
+            <span className="tab-icon">💼</span>
+            <span>Work Experience</span>
+          </button>
+          <button
+            className={`tab-button ${activeTab === "education" ? "active" : ""}`}
+            onClick={() => setActiveTab("education")}
+          >
+            <span className="tab-icon">🎓</span>
+            <span>Education</span>
+          </button>
+        </div>
 
-          <div className="timeline">
-            {experienceData.map((experience, index) => (
-              <ExperienceCard
-                key={experience.company}
-                experience={experience}
-                isFeatured={index === 0}
-              />
-            ))}
-          </div>
-        </section>
+        {/* Tab Content */}
+        <div className="tab-content">
+          {activeTab === "experience" && (
+            <section className="section-block">
+              {/* <div className="section-header">
+                <div className="section-icon work-icon">💼</div>
+                <h2>Work Experience</h2>
+              </div> */}
 
-        {/* Education Section */}
-        <section className="section-block">
-          <div className="section-header">
-            <div className="section-icon education-icon">🎓</div>
-            <h2>Education</h2>
-          </div>
+              <div className="timeline">
+                {experienceData.map((experience, index) => (
+                  <ExperienceCard
+                    key={experience.company}
+                    experience={experience}
+                    isFeatured={index === 0}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
 
-          <div className="timeline">
-            {/* BUET - standalone */}
-            <EducationCard
-              key={educationData[0].badgeText}
-              education={educationData[0]}
-              isFeatured={true}
-            />
-            
-            {/* HSC and SSC - side by side */}
-            <div className="education-row">
-              <EducationCard
-                key={educationData[1].badgeText}
-                education={educationData[1]}
-                isFeatured={false}
-              />
-              <EducationCard
-                key={educationData[2].badgeText}
-                education={educationData[2]}
-                isFeatured={false}
-              />
-            </div>
-          </div>
-        </section>
+          {activeTab === "education" && (
+            <section className="section-block">
+              {/* <div className="section-header">
+                <div className="section-icon education-icon">🎓</div>
+                <h2>Education</h2>
+              </div> */}
+
+              <div className="timeline">
+                {/* BUET - standalone */}
+                <EducationCard
+                  key={educationData[0].badgeText}
+                  education={educationData[0]}
+                  isFeatured={true}
+                />
+                
+                {/* HSC and SSC - side by side */}
+                <div className="education-row">
+                  <EducationCard
+                    key={educationData[1].badgeText}
+                    education={educationData[1]}
+                    isFeatured={false}
+                  />
+                  <EducationCard
+                    key={educationData[2].badgeText}
+                    education={educationData[2]}
+                    isFeatured={false}
+                  />
+                </div>
+              </div>
+            </section>
+          )}
+        </div>
       </div>
     </div>
   );

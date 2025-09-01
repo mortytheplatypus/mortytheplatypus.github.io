@@ -12,7 +12,7 @@ export const TabContainer = () => {
       case "/home":
         setValue(0);
         break;
-      case "/academics":
+      case "/career":
         setValue(1);
         break;
       case "/projects":
@@ -61,18 +61,26 @@ export const TabContainer = () => {
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
+              "&:hover": {
+                backgroundColor: "#EAEAE2",
+                borderRadius: "4px",
+              },
             }}
           />
           <Tab
-            label="Academics"
+            label="Career"
             component={Link}
-            to="/academics"
+            to="/career"
             sx={{
               fontWeight: value === 1 ? "bold" : "normal",
               fontSize: value === 1 ? "0.95rem" : "0.8rem",
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
+              "&:hover": {
+                backgroundColor: "#EAEAE2",
+                borderRadius: "4px",
+              },
             }}
           />
           <Tab
@@ -85,6 +93,10 @@ export const TabContainer = () => {
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
+              "&:hover": {
+                backgroundColor: "#EAEAE2",
+                borderRadius: "4px",
+              },
             }}
           />
           <Tab
@@ -97,6 +109,10 @@ export const TabContainer = () => {
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
+              "&:hover": {
+                backgroundColor: "#EAEAE2",
+                borderRadius: "4px",
+              },
             }}
           />
           <Tab
@@ -109,6 +125,10 @@ export const TabContainer = () => {
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
+              "&:hover": {
+                backgroundColor: "#EAEAE2",
+                borderRadius: "4px",
+              },
             }}
           />
         </Tabs>
