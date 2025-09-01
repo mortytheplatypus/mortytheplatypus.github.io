@@ -77,7 +77,107 @@ const educationData = [
     degree: "Secondary School Certificate (SSC)",
     description:
       "Spent my formative academic years from Class 3 to 10, developing strong analytical thinking and problem-solving skills that became the cornerstone of my educational foundation.",
-  }
+  },
+];
+
+const skillsData = [
+  {
+    category: "Tech Stack",
+    icon: "🔧",
+    skills: [
+      "Spring Boot",
+      "React",
+      "Docker",
+      "WebSocket",
+      "Liquibase",
+      "MySQL",
+      "Cassandra",
+      "Redis",
+      "Kafka",
+      "Nginx",
+    ],
+  },
+  {
+    category: "Programming Languages",
+    icon: "💻",
+    skills: [
+      "C",
+      "C++",
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Bash Script",
+      "HTML5",
+      "CSS3",
+      "Markdown",
+      "LaTeX",
+    ],
+  },
+  {
+    category: "Backend Frameworks & Libraries",
+    icon: "⚙️",
+    skills: [
+      "Spring",
+      "Django",
+      "Flask",
+      "Express.js",
+      "Node.js",
+      "Next",
+      "JWT",
+      "Apache Maven",
+    ],
+  },
+  {
+    category: "Frontend & UI",
+    icon: "🎨",
+    skills: ["React", "Redux", "TailwindCSS", "MUI"],
+  },
+  {
+    category: "Databases & Storage",
+    icon: "🗄️",
+    skills: [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Cassandra",
+      "Supabase",
+    ],
+  },
+  {
+    category: "Messaging & Streaming",
+    icon: "📡",
+    skills: ["Apache Kafka"],
+  },
+  {
+    category: "Deployment & Cloud Platforms",
+    icon: "🌐",
+    skills: ["Netlify", "Vercel", "Nginx", "Docker"],
+  },
+  {
+    category: "DevOps & CI/CD",
+    icon: "🔄",
+    skills: ["Git", "GitHub", "GitLab", "GitHub Actions", "SonarLint"],
+  },
+  {
+    category: "Data Science & Machine Learning",
+    icon: "📊",
+    skills: [
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Scipy",
+      "Scikit-learn",
+      "PyTorch",
+      "TensorFlow",
+    ],
+  },
+  {
+    category: "Tools & Utilities",
+    icon: "🛠️",
+    skills: ["Postman", "Swagger", "Jira", "Trello", "FFmpeg"],
+  },
 ];
 
 const ExperienceCard = ({ experience, isFeatured = false }) => {
@@ -130,8 +230,31 @@ EducationCard.propTypes = {
   isFeatured: PropTypes.bool,
 };
 
+const SkillCategory = ({ skillCategory, isFeatured = false }) => {
+  return (
+    <div className={`skill-category-card ${isFeatured ? "featured" : ""}`}>
+      <div className="skill-category-header">
+        <span className="category-icon">{skillCategory.icon}</span>
+        <h3 className="category-title">{skillCategory.category}</h3>
+      </div>
+      <div className="skills-grid">
+        {skillCategory.skills.map((skill) => (
+          <span key={skill} className="skill-tag">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+SkillCategory.propTypes = {
+  skillCategory: PropTypes.object.isRequired,
+  isFeatured: PropTypes.bool,
+};
+
 export const Career = () => {
-  const [activeTab, setActiveTab] = useState("experience");
+  const [activeTab, setActiveTab] = useState("skills");
 
   return (
     <div className="academics-container">
@@ -139,14 +262,25 @@ export const Career = () => {
         {/* Tab Navigation */}
         <div className="tab-navigation">
           <button
-            className={`tab-button ${activeTab === "experience" ? "active" : ""}`}
+            className={`tab-button ${activeTab === "skills" ? "active" : ""}`}
+            onClick={() => setActiveTab("skills")}
+          >
+            <span className="tab-icon">💻</span>
+            <span>Skills</span>
+          </button>
+          <button
+            className={`tab-button ${
+              activeTab === "experience" ? "active" : ""
+            }`}
             onClick={() => setActiveTab("experience")}
           >
             <span className="tab-icon">💼</span>
             <span>Work Experience</span>
           </button>
           <button
-            className={`tab-button ${activeTab === "education" ? "active" : ""}`}
+            className={`tab-button ${
+              activeTab === "education" ? "active" : ""
+            }`}
             onClick={() => setActiveTab("education")}
           >
             <span className="tab-icon">🎓</span>
@@ -156,6 +290,20 @@ export const Career = () => {
 
         {/* Tab Content */}
         <div className="tab-content">
+          {activeTab === "skills" && (
+            <section className="section-block">
+              <div className="skills-timeline">
+                {skillsData.map((skillCategory, index) => (
+                  <SkillCategory
+                    key={skillCategory.category}
+                    skillCategory={skillCategory}
+                    isFeatured={index === 0}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
           {activeTab === "experience" && (
             <section className="section-block">
               {/* <div className="section-header">
@@ -189,7 +337,7 @@ export const Career = () => {
                   education={educationData[0]}
                   isFeatured={true}
                 />
-                
+
                 {/* HSC and SSC - side by side */}
                 <div className="education-row">
                   <EducationCard

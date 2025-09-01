@@ -99,12 +99,12 @@ export const TabContainer = () => {
             }}
           />
           <Tab
-            label="Hobbies"
+            label="Writeups"
             component={Link}
-            to="/hobbies"
+            to="/writeups"
             sx={{
-              fontWeight: value === 3 ? "bold" : "normal",
-              fontSize: value === 3 ? "0.95rem" : "0.8rem",
+              fontWeight: value === 4 ? "bold" : "normal",
+              fontSize: value === 4 ? "0.95rem" : "0.8rem",
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
@@ -115,12 +115,12 @@ export const TabContainer = () => {
             }}
           />
           <Tab
-            label="Writeups"
+            label="Hobbies"
             component={Link}
-            to="/writeups"
+            to="/hobbies"
             sx={{
-              fontWeight: value === 4 ? "bold" : "normal",
-              fontSize: value === 4 ? "0.95rem" : "0.8rem",
+              fontWeight: value === 3 ? "bold" : "normal",
+              fontSize: value === 3 ? "0.95rem" : "0.8rem",
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
