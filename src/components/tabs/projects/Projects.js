@@ -4,10 +4,10 @@ import './Projects.css';
 export const Projects = () => {
   const projects = [
     {
-      title: "Auth Me In",
-      description: "A web application providing user registration and authentication features. Built with React frontend and Spring Boot backend, featuring secure user management and session handling.",
-      tech: ["React", "Spring Boot", "Java 17", "MySQL", "JWT"],
-      github: "https://github.com/mortytheplatypus/Auth-Me-In",
+      title: "JWT Authenticator",
+      description: "JWT Authenticator is a full-stack web application template that provides secure user registration and authentication features using JSON Web Tokens (JWT).",
+      tech: ["React", "Spring Boot", "Java 17", "PostgreSQL", "JWT"],
+      github: "https://github.com/mortytheplatypus/jwt-authenticator",
       type: "Full Stack"
     },
     {
