@@ -11,6 +11,13 @@ export const Projects = () => {
       type: "Full Stack"
     },
     {
+      title: "Find My Apartment",
+      description: "An apartment finding platform built as a university software development project. This full-stack application helps users find apartments based on various criteria including type (Bachelor, Family, Sublet), location, budget, facilities, and more.",
+      tech: ["ExpressJS", "NextJS", "PostgreSQL", "Supabase", "TailwindCSS", "MUI"],
+      github: "https://github.com/mortytheplatypus/find-my-apartment",
+      type: "Full Stack"
+    },
+    {
       title: "Fantasy Premier League",
       description: "A comprehensive fantasy football platform built as a CSE216 project. Features user management, team creation, and real-time score tracking using Oracle database.",
       tech: ["JavaScript", "Node.js", "Oracle 19c", "PLSQL", "React"],
