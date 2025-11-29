@@ -16,6 +16,7 @@ export const Projects = () => {
       github: "https://github.com/mortytheplatypus/pasteruf",
       type: "Full Stack"
     },
+    {
       title: "Find My Apartment",
       description: "An apartment finding platform built as a university software development project. This full-stack application helps users find apartments based on various criteria including type (Bachelor, Family, Sublet), location, budget, facilities, and more.",
       tech: ["ExpressJS", "NextJS", "PostgreSQL", "Supabase", "TailwindCSS", "MUI"],
