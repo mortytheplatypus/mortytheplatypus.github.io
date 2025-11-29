@@ -1,4 +1,3 @@
-import React from 'react';
 import './Projects.css';
 
 export const Projects = () => {
@@ -11,6 +10,12 @@ export const Projects = () => {
       type: "Full Stack"
     },
     {
+      title: "Pasteruf",
+      description: "Pasteruf is a pastebin-like web application that allows users to share text snippets. It also features auto redirect for shortened URLs.",
+      tech: ["React", "Flask", "Python", "PostgreSQL"],
+      github: "https://github.com/mortytheplatypus/pasteruf",
+      type: "Full Stack"
+    },
       title: "Find My Apartment",
       description: "An apartment finding platform built as a university software development project. This full-stack application helps users find apartments based on various criteria including type (Bachelor, Family, Sublet), location, budget, facilities, and more.",
       tech: ["ExpressJS", "NextJS", "PostgreSQL", "Supabase", "TailwindCSS", "MUI"],

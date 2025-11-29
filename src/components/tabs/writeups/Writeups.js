@@ -1,32 +1,41 @@
-import React from 'react';
 import './Writeups.css';
+
+const NOTION_BASE_URL = "https://mortytheplatypus.notion.site";
 
 export const Writeups = () => {
   const articles = [
     {
       id: 1,
-      title: "Spring Boot Profiling",
-      description: "A comprehensive guide about configuring and using different profiles in Spring Boot applications",
-      link: "https://feline-week-e64.notion.site/Spring-Boot-Profiling-f6cce511e83a41ada33e5e98f3d8124e?pvs=4",
-      tags: ["Spring Boot", "Java", "Backend"],
-      date: "2024"
+      title: "Browsers and their obession with Preflights",
+      description: "Understanding CORS preflight requests and how different browsers handle them",
+      link: `${NOTION_BASE_URL}/Browsers-and-their-obession-with-Preflights-2ba5ba87cb0b80aab44afa364b69f509e`,
+      tags: ["CORS", "Backend"],
+      date: "2025"
     },
     {
       id: 2,
+      title: "Understanding JWTs",
+      description: "A detailed explanation of JSON Web Tokens (JWTs) and their creation process",
+      link: `${NOTION_BASE_URL}/Understanding-JWTs-1cd5ba87cb0b8037b4bdc7029b39d4a5`,
+      tags: ["JWT", "Encryption"],
+      date: "2025"
+    },
+    {
+      id: 3,
       title: "Building Microservices in Spring Boot",
       description: "A beginner's guide on building microservices in Spring Boot with Eureka",
-      link: "https://feline-week-e64.notion.site/Building-Microservices-in-Spring-Boot-with-Eureka-1405ba87cb0b806ba922ed1f6d91f1f9?pvs=4",
+      link: `${NOTION_BASE_URL}/Building-Microservices-in-Spring-Boot-with-Eureka-1405ba87cb0b806ba922ed1f6d91f1f9`,
       tags: ["Spring Boot", "Java", "Micrservices"],
       date: "2024"
     },
     {
-      id: 3,
-      title: "Understanding JWTs",
-      description: "A detailed explanation of JSON Web Tokens (JWTs) and their creation process",
-      link: "https://www.notion.so/Understanding-JWTs-1cd5ba87cb0b8037b4bdc7029b39d4a5",
-      tags: ["JWT", "Encryption"],
-      date: "2025"
-    }
+      id: 1,
+      title: "Spring Boot Profiling",
+      description: "A comprehensive guide about configuring and using different profiles in Spring Boot applications",
+      link: `${NOTION_BASE_URL}/Spring-Boot-Profiling-f6cce511e83a41ada33e5e98f3d8124e`,
+      tags: ["Spring Boot", "Java", "Backend"],
+      date: "2024"
+    },
   ];
 
   return (
