@@ -17,12 +17,12 @@ export const TabContainer = () => {
       case "/projects":
         setValue(2);
         break;
-      case "/hobbies":
+      case "/writeups":
         setValue(3);
         break;
-      case "/writeups":
-        setValue(4);
-        break;
+      // case "/hobbies":
+      //   setValue(4);
+      //   break;
       default:
         setValue(0);
     }
@@ -114,7 +114,7 @@ export const TabContainer = () => {
               },
             }}
           />
-          <Tab
+          {/* <Tab
             label="Hobbies"
             component={Link}
             to="/hobbies"
@@ -129,7 +129,7 @@ export const TabContainer = () => {
                 borderRadius: "4px",
               },
             }}
-          />
+          /> */}
         </Tabs>
       </Toolbar>
     </AppBar>
