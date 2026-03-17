@@ -54,6 +54,7 @@ export const Writeups = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="article-card"
+            title={article.link}
             key={article.id}
           >
             <span className="article-index">
