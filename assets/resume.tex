@@ -1,0 +1,165 @@
+\documentclass[9pt]{developercv} 
+\usepackage{multicol}
+\setlength{\columnsep}{0mm}
+
+\begin{document}
+
+%	TITLE AND CONTACT INFORMATION
+\begin{minipage}[t]{0.45\textwidth} 
+	\vspace{-\baselineskip} 
+	
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Al Amru Bil Maruf}}}}
+	
+	\vspace{6pt}
+	
+	{\Large Software Engineer} 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth} 
+	\vspace{-\baselineskip} 
+	
+    \icon{Phone}{11}{+8801788268495} \\
+    \icon{MapMarker}{11}{Dhaka, Bangladesh} \\
+	
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth} 
+	\vspace{-\baselineskip}
+	
+	\icon{Envelope}{11}{\href{mailto:alamrubilmaruf412@gmail.com}{alamrubilmaruf412@gmail.com}} \\	
+    \icon{Github}{11}{\href{https://mortytheplatypus.github.io/}{mortytheplatypus.github.io}} \\  
+    
+\end{minipage}
+
+%	SKILLS
+\cvsect{Skills}
+\vspace{-6pt}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Languages:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{Java, JavaScript, Go, Python, C/C++, Bash}}
+\end{minipage}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Frameworks:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{Spring Boot, React, Next.js, Express.js, Flask}}
+\end{minipage}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Databases:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{MySQL, PostgreSQL, MongoDB, Cassandra}}
+\end{minipage}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Infrastructure:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{Nginx, Docker, Kafka, Redis, CDN, RTMP, HLS, Coroot}}
+\end{minipage}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Tools/Protocols:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{Git, Liquibase, Locust, Websocket, JWT}}
+\end{minipage}
+
+%	EXPERIENCE
+\cvsect{Experience}
+\begin{entrylist}
+    \entry
+        {June 2024 \\ onwards}
+        {Synesis IT PLC}
+        {Software Engineer}
+        {Core contributor to \href{https://convay.com}{Convay}, a high-scale video conferencing platform.
+        \begin{itemize}\setlength\itemsep{0.05em}
+            \item \textbf{Infrastructure Optimization:} Architected an HLS edge-caching strategy that resolved critical bottlenecks where 32-core CPUs were maxing out at 1Gbps; successfully scaled delivery to 10k+ concurrent viewers with near-zero increase in origin load.
+            % \item \textbf{System Resilience:} Engineered an RTMP ingest proxy with automatic origin failover and implemented token-based security for HLS playlists to prevent unauthorized access.
+            \item \textbf{Load Testing:} Designed and executed simulations for 12k live WebSocket participants using Locust, identifying and fixing distributed messaging bottlenecks in the Spring Boot/Kafka layer.
+            \item \textbf{Feature Development:} Developed RBAC, scheduling logic, and custom end-to-end messaging protocols for the core meeting engine.
+            \item \textbf{Observability:} Utilized Coroot to monitor system health and proactively debug performance regressions in production.
+        \end{itemize}
+        \textbf{Tech Stack:} {\large \texttt{Spring Boot, React, Kafka, Docker, Nginx, Cassandra, MySQL, Liquibase}}
+        }
+\end{entrylist}
+\begin{entrylist}
+    \entry
+        {December 2023 -- \\ May 2024}
+        {Sentien IO}
+        {Frontend Engineer}
+        {Lead the frontend development and UI/UX design for this AI-driven interview preparation platform.
+        \begin{itemize}\setlength\itemsep{0.05em}
+            \item \textbf{Core User Journey:} Developed a multi-step flow for interviewer selection, resume uploading, and targeted role tracking.
+            \item \textbf{Dashboards \& Analytics:} Developed interactive user portals to manage saved jobs, track interview histories, and visualize actionable post-interview feedback via dynamic charts and gamified metrics.
+        \end{itemize}
+        \textbf{Tech Stack:} {\large \texttt{React, Next.js, TypeScript, Tailwind CSS, Recharts}} 
+        }
+\end{entrylist}
+\begin{entrylist}
+	\entry
+        {May 2023 -- \\ June 2023}
+		{MYSOFT LIMITED}
+		{Health Analytics Intern}
+		{Developed a real-time health analytics dashboard to visualize hospital data trends.
+        \begin{itemize}\setlength\itemsep{0.05em}
+            \item Processed multi-dimensional health datasets to identify regional and seasonal disease outbreaks based on patient demographics (age, gender, location).
+            \item Built a full-stack application using Flask and Angular to provide hospital administrators with actionable insights into operational overhead.
+        \end{itemize}
+		\textbf{Tech Stack}: {\large \texttt{Flask, Angular, PostgreSQL}}}
+\end{entrylist}
+
+%	PROJECTS
+\cvsect{Projects}
+\begin{entrylist}
+    \entry
+		{\texttt{PostgreSQL} \\ \texttt{Spring Boot}}
+		{Jwt Authenticator}
+		{{\href{https://github.com/mortytheplatypus/jwt-authenticator}{GitHub}}}
+		{Developed a reusable full-stack authentication template providing secure registration and session management using JSON Web Tokens (JWT), designed for rapid integration into new web applications.}
+    \entry
+		{\texttt{Next.js} \\ \texttt{Express.js}}
+		{Find My Apartment}
+		{{\href{https://github.com/mortytheplatypus/find-my-apartment-api}{Backend}} | {\href{https://github.com/mortytheplatypus/find-my-apartment-frontend}{Frontend}}}
+		{Built an apartment-search platform with advanced filtering, personalized recommendation logic, and integrated map views for enhanced user experience.}
+    \entry
+		{\texttt{Flask} \\ \texttt{React}}
+		{Pasteruf}
+		{{\href{https://github.com/mortytheplatypus/pasteruf-backend}{GitHub}}}
+		{Engineered a dual-purpose platform for persistent text storage and URL shortening. Features automatic redirection logic and a streamlined interface for sharing content across platforms.}
+    \entry
+		{\texttt{PLSQL} \\ \texttt{React} \\ \texttt{Express.js}}
+		{Fantasy Premier League}
+		{\href{https://github.com/mortytheplatypus/FantasyPremierLeagueCSE216}{Fantasy Premier League GitHub}}
+		{Replicating Fantasy Premier League, which allows users to create fantasy football teams, select players, and compete in leagues.}
+    
+\end{entrylist}
+
+\newpage
+
+%	EDUCATION
+\cvsect{Education}
+\begin{entrylist}
+    \entry
+		{2019 --- 2024}
+		{Bangladesh University of Engineering and Technology}
+		{BSc in CSE}
+		{CGPA: 3.48/4.00 \\
+        \textbf{Thesis}: Handwritten Bangla Character Recognition Using Convolutional Neural Networks (CNN)}
+\end{entrylist}
+
+%	OTHERS
+\cvsect{Others}
+    \qquad  - Fluent in Bengali and English \\
+    \qquad  - Senior Member and Mentor in Dinajpur Math Club 
+
+\end{document}
