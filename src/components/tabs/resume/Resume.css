@@ -1,86 +1,257 @@
-
 .resume-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    height: 90vh;
+    padding: 2rem;
     width: 100%;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80vh;
+    overflow-y: auto;
+    padding-bottom: 4rem;
     box-sizing: border-box;
+    color: var(--primary-text);
+}
+
+.resume-header-actions {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
 }
 
 .download-button {
-    background-color: #e5e5e5;
-    height: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #0d111f;
+    color: white;
     text-decoration: none;
-    color: #2d2f2f;
-    padding: 1rem;
-    border: 1px solid #2d2f2f;
-    border-radius: 8px;
-    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
     font-weight: 600;
-    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .download-button:hover {
-    background-color: #dadada;
+    background-color: #262933;
 }
 
-.pdf-viewer {
-    width: 800px;
-    flex: 1;
-    max-height: calc(90vh - 150px);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    background-color: #f8f9fa;
-    position: relative;
-    border: 1px solid #e0e0e0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* PDF Iframe Styling */
-.pdf-iframe {
+.resume-content {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--accent-color);
     width: 100%;
-    flex: 1;
-    border: none;
-    background-color: white;
-    border-radius: 12px 12px 0 0;
+    max-width: 960px;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    text-align: left;
 }
 
-.pdf-iframe p {
-    padding: 3rem 2rem;
+/* Header Styles */
+.resume-header {
     text-align: center;
-    font-family: 'Gill Sans', sans-serif;
-    color: var(--primary-text);
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 1.5rem;
+}
+
+.resume-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    color: var(--primary-text-dark);
+}
+
+.resume-header h2 {
+    margin: 0 0 1rem 0;
     font-size: 1.2rem;
-    line-height: 1.6;
-    background-color: #f8f9fa;
-    margin: 0;
-    height: 100%;
+    font-weight: 500;
+    color: var(--secondary-text);
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.contact-info a {
+    color: var(--primary-text-dark);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Section Common Styles */
+.resume-section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    color: var(--primary-text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--secondary-text);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Skills Layout */
+.skills-grid {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    text-align: left;
 }
 
-.pdf-iframe a {
-    color: var(--primary-text);
-    text-decoration: underline;
-    font-weight: 600;
-    font-family: 'Gill Sans', sans-serif;
-    transition: color 0.3s ease;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.skill-category {
+    width: 100%;
+    text-align: left;
 }
 
-.pdf-iframe a:hover {
+/* Experience Layout */
+.experience-item, .project-item {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.experience-item:last-child, .project-item:last-child {
+    margin-bottom: 0;
+}
+
+.experience-header, .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.experience-header h4, .project-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
     color: var(--primary-text-dark);
-    background-color: #f0f0f0;
+}
+
+.experience-header h5 {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--secondary-text);
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    white-space: nowrap;
+}
+
+.experience-summary {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--secondary-text);
+    margin: 0.5rem 0;
+}
+
+.resume-section ul {
+    margin: 0.5rem 0 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.resume-section li {
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Projects Layout */
+.project-links {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.project-links a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.tech-tags {
+    font-size: 0.85rem;
+    font-family: monospace;
+    background: var(--primary-bg);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #4b5563;
+}
+
+.project-item p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Bottom Sections (Education & Others side-by-side) */
+.bottom-sections {
+    display: flex;
+    gap: 2rem;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.education-item h4 {
+    margin: 0 0 0.25rem 0;
+}
+
+.education-item h5 {
+    margin: 0 0 0.5rem 0;
+    font-weight: normal;
+}
+
+.education-item p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.others-list {
+    padding-left: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .resume-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .experience-header, .project-header {
+        flex-direction: column;
+    }
+    
+    .date {
+        margin-top: 0.25rem;
+    }
+
+    .bottom-sections {
+        flex-direction: column;
+        gap: 0;
+    }
 }
