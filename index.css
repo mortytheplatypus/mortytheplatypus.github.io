@@ -41,7 +41,18 @@ html, body {
     font-size: 60px;
     font-weight: 800;
     letter-spacing: 5px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0 1rem;
     opacity: 0;
     transform: translateY(40px);
     transition: 1s;
+}
+
+@media (max-width: 768px) {
+    .intro-name {
+        font-size: 36px;
+        letter-spacing: 2px;
+        padding: 0 0.75rem;
+    }
 }
