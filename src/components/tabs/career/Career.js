@@ -4,12 +4,12 @@ import "./Career.css";
 
 const experienceData = [
   {
-    period: "May 2024 - Present",
+    period: "June 2024 - Present",
     isCurrent: true,
-    position: "Software Engineer I",
+    position: "Software Engineer",
     company: "Synesis IT PLC",
     description:
-      "Contributing to the full-stack development of Convay, a cutting-edge video conferencing platform. Leading feature development initiatives, implementing critical bug fixes, and driving code refactoring efforts while maintaining industry best practices to deliver exceptional user experiences.",
+      "Core contributor to Convay, a high-scale video conferencing platform. Built performance-sensitive backend and real-time features with a focus on reliability, scalability, and production observability.",
     techStack: [
       "Spring Boot",
       "React",
@@ -24,22 +24,31 @@ const experienceData = [
     ],
   },
   {
+    period: "Dec 2023 - May 2024",
+    isCurrent: false,
+    position: "Frontend Engineer",
+    company: "Sentien IO",
+    description:
+      "Led frontend development and UI/UX design for an AI-driven interview preparation platform. Shipped key flows and analytics-heavy views that improved usability and actionable user feedback.",
+    techStack: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Recharts",
+    ],
+  },
+  {
     period: "May 2023 - June 2023",
     isCurrent: false,
-    duration: "2 months",
-    position: "Software Developer Intern",
-    company: "MySoft Limited",
+    position: "Health Analytics Intern",
+    company: "MYSOFT LIMITED",
     description:
-      "Specialized in healthcare big data management and analytics during undergraduate studies. Developed data-driven solutions to identify trends and patterns, optimizing operational efficiency and enhancing service delivery for hospitals and patients.",
+      "Developed a real-time health analytics dashboard to visualize hospital data trends and help administrators take data-backed operational decisions.",
     techStack: [
       "Flask",
       "Angular",
       "PostgreSQL",
-      "Numpy",
-      "Pandas",
-      "Matplotlib",
-      "Seaborn",
-      "Scikit-learn",
     ],
   },
 ];
@@ -82,101 +91,45 @@ const educationData = [
 
 const skillsData = [
   {
-    category: "Tech Stack",
-    icon: "🔧",
+    category: "Languages",
+    icon: "💻",
+    skills: ["Java", "JavaScript", "Go", "Python", "C/C++", "Bash", "TypeScript"],
+  },
+  {
+    category: "Frameworks",
+    icon: "🧩",
     skills: [
       "Spring Boot",
       "React",
-      "Docker",
-      "WebSocket",
-      "Liquibase",
-      "MySQL",
-      "Cassandra",
-      "Redis",
-      "Kafka",
-      "Nginx",
+      "Next.js",
+      "Express.js",
+      "Flask",
     ],
   },
   {
-    category: "Programming Languages",
-    icon: "💻",
-    skills: [
-      "C",
-      "C++",
-      "Java",
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "Bash Script",
-      "HTML5",
-      "CSS3",
-      "Markdown",
-      "LaTeX",
-    ],
+    category: "Databases",
+    icon: "🗄️",
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "Cassandra"],
   },
   {
-    category: "Backend Frameworks & Libraries",
+    category: "Infrastructure",
     icon: "⚙️",
     skills: [
-      "Spring",
-      "Django",
-      "Flask",
-      "Express.js",
-      "Node.js",
-      "Next",
-      "JWT",
-      "Apache Maven",
+      "Nginx",
+      "Docker",
+      "Kafka",
+      "Redis"
     ],
   },
   {
-    category: "Frontend & UI",
-    icon: "🎨",
-    skills: ["React", "Redux", "TailwindCSS", "MUI"],
-  },
-  {
-    category: "Databases & Storage",
-    icon: "🗄️",
-    skills: [
-      "MySQL",
-      "PostgreSQL",
-      "MongoDB",
-      "Redis",
-      "Cassandra",
-      "Supabase",
-    ],
-  },
-  {
-    category: "Messaging & Streaming",
-    icon: "📡",
-    skills: ["Apache Kafka"],
-  },
-  {
-    category: "Deployment & Cloud Platforms",
-    icon: "🌐",
-    skills: ["Netlify", "Vercel", "Nginx", "Docker"],
-  },
-  {
-    category: "DevOps & CI/CD",
-    icon: "🔄",
-    skills: ["Git", "GitHub", "GitLab", "GitHub Actions", "SonarLint"],
-  },
-  {
-    category: "Data Science & Machine Learning",
-    icon: "📊",
-    skills: [
-      "NumPy",
-      "Pandas",
-      "Matplotlib",
-      "Scipy",
-      "Scikit-learn",
-      "PyTorch",
-      "TensorFlow",
-    ],
-  },
-  {
-    category: "Tools & Utilities",
+    category: "Tools",
     icon: "🛠️",
-    skills: ["Postman", "Swagger", "Jira", "Trello", "FFmpeg"],
+    skills: ["Redux", "Tailwind CSS", "Liquibase", "Locust", "FFmpeg", "Coroot"],
+  },
+  {
+    category: "Communication & Delivery",
+    icon: "📡",
+    skills: ["WebSocket", "JWT", "CDN", "RTMP", "HLS"],
   },
 ];
 
@@ -237,7 +190,7 @@ const SkillCategory = ({ skillCategory, isFeatured = false }) => {
         <span className="category-icon">{skillCategory.icon}</span>
         <h3 className="category-title">{skillCategory.category}</h3>
       </div>
-      <div className="skills-grid">
+      <div className="career-skills-grid">
         {skillCategory.skills.map((skill) => (
           <span key={skill} className="skill-tag">
             {skill}
