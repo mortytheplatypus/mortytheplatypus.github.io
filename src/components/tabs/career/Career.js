@@ -246,11 +246,10 @@ export const Career = () => {
           {activeTab === "skills" && (
             <section className="section-block">
               <div className="skills-timeline">
-                {skillsData.map((skillCategory, index) => (
+                {skillsData.map((skillCategory) => (
                   <SkillCategory
                     key={skillCategory.category}
                     skillCategory={skillCategory}
-                    isFeatured={index === 0}
                   />
                 ))}
               </div>
@@ -259,11 +258,6 @@ export const Career = () => {
 
           {activeTab === "experience" && (
             <section className="section-block">
-              {/* <div className="section-header">
-                <div className="section-icon work-icon">💼</div>
-                <h2>Work Experience</h2>
-              </div> */}
-
               <div className="timeline">
                 {experienceData.map((experience, index) => (
                   <ExperienceCard
@@ -278,11 +272,6 @@ export const Career = () => {
 
           {activeTab === "education" && (
             <section className="section-block">
-              {/* <div className="section-header">
-                <div className="section-icon education-icon">🎓</div>
-                <h2>Education</h2>
-              </div> */}
-
               <div className="timeline">
                 {/* BUET - standalone */}
                 <EducationCard

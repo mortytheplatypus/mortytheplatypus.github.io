@@ -4,20 +4,6 @@ import './Resume.css';
 export default function Resume() {
     return (
         <div className="resume-container">
-            <div className="resume-header-actions">
-                <a 
-                    href="/assets/pdf/al_amru_bil_maruf_cv.pdf" 
-                    download="al_amru_bil_maruf_cv.pdf"
-                    className="download-button"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style={{marginRight: '8px'}}>
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                    </svg>
-                    Download PDF
-                </a>
-            </div>
-
             <div className="resume-content">
                 {/* HEADER */}
                 <header className="resume-header">
@@ -50,7 +36,7 @@ export default function Resume() {
                     <div className="experience-item">
                         <div className="experience-header">
                             <div>
-                                <h4># Synesis IT PLC</h4>
+                                <h4>Synesis IT PLC</h4>
                                 <h5>Software Engineer</h5>
                             </div>
                             <span className="date">June 2024 — Present</span>
@@ -68,7 +54,7 @@ export default function Resume() {
                     <div className="experience-item">
                         <div className="experience-header">
                             <div>
-                                <h4># Sentien IO</h4>
+                                <h4>Sentien IO</h4>
                                 <h5>Frontend Engineer</h5>
                             </div>
                             <span className="date">Dec 2023 — May 2024</span>
@@ -84,7 +70,7 @@ export default function Resume() {
                     <div className="experience-item">
                         <div className="experience-header">
                             <div>
-                                <h4># MYSOFT LIMITED</h4>
+                                <h4>MYSOFT LIMITED</h4>
                                 <h5>Health Analytics Intern</h5>
                             </div>
                             <span className="date">May 2023 — June 2023</span>
@@ -156,6 +142,19 @@ export default function Resume() {
                         </ul>
                     </section>
                 </div>
+            </div>
+            <div className="resume-footer-actions">
+                <a 
+                    href="/assets/pdf/al_amru_bil_maruf_cv.pdf" 
+                    download="al_amru_bil_maruf_cv.pdf"
+                    className="download-button"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style={{marginRight: '8px'}}>
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                    </svg>
+                    Download PDF
+                </a>
             </div>
         </div>
     );

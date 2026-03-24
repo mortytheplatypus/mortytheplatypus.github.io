@@ -35,7 +35,7 @@
 /* Tab Navigation */
 .tab-navigation {
   display: flex;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--primary-bg);
   backdrop-filter: blur(20px);
   border: 1px solid #dee2e6;
   border-radius: 15px;
@@ -66,7 +66,7 @@
 }
 
 .tab-button:hover {
-  background: #F7F9F2;
+  background: #E7E9E2;
   color: #495057;
   transform: translateY(-1px);
 }
@@ -80,7 +80,7 @@
 }
 
 .tab-button.active:hover {
-  background: #F7F9F2;
+  background: #E7E9E2;
   transform: translateY(-1px);
 }
 
@@ -129,7 +129,7 @@
   font-size: 2.5rem;
   padding: 1rem;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--primary-bg);
   backdrop-filter: blur(10px);
   border: 1px solid #dee2e6;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -163,7 +163,7 @@
 /* Cards */
 .experience-card,
 .education-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--primary-bg);
   backdrop-filter: blur(20px);
   border: 1px solid #dee2e6;
   border-radius: 15px;

@@ -43,10 +43,6 @@ export const Writeups = () => {
 
   return (
     <div className="writeups-container">
-      <div className="writeups-header">
-        <h2>Notes from the trenches</h2>
-      </div>
-
       <div className="articles-grid">
         {articles.map((article, index) => (
           <a

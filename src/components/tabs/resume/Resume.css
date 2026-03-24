@@ -2,23 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     height: 80vh;
     overflow-y: auto;
-    padding-bottom: 4rem;
+    padding-bottom: 1.5rem;
     box-sizing: border-box;
     color: var(--primary-text);
 }
 
-.resume-header-actions {
+.resume-footer-actions {
     width: 100%;
-    max-width: 960px;
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
 .download-button {
@@ -29,14 +28,14 @@
     text-decoration: none;
     padding: 0.6rem 1.2rem;
     border-radius: 6px;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     font-weight: 600;
     transition: background-color 0.2s ease;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .download-button:hover {
-    background-color: #262933;
+    background-color: #2b2d35;
 }
 
 .resume-content {

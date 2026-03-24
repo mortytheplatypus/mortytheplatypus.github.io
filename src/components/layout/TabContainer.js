@@ -20,9 +20,6 @@ export const TabContainer = () => {
       case "/writeups":
         setValue(3);
         break;
-      // case "/hobbies":
-      //   setValue(4);
-      //   break;
       default:
         setValue(0);
     }
@@ -39,16 +36,17 @@ export const TabContainer = () => {
       sx={{
         width: { xs: "90%", sm: "80%" },
         borderRadius: 1,
-        bgcolor: "var(--primary-bg)"
+        bgcolor: "transparent"
       }}
     >
-      <Toolbar sx={{ justifyContent: "center" }}>
+      <Toolbar sx={{ justifyContent: "center", backgroundColor: "transparent" }}>
         <Tabs
           value={value}
           onChange={handleChange}
           variant="scrollable"
           scrollButtons="auto"
           TabIndicatorProps={{ style: { display: "none" } }}
+          sx={{ backgroundColor: "transparent" }}
         >
         <Tab
           label="Resume"
@@ -56,7 +54,7 @@ export const TabContainer = () => {
           to="/resume"
           sx={{
             fontWeight: value === 5 ? "bold" : "normal",
-            fontSize: value === 5 ? "0.95rem" : "0.8rem",
+            fontSize: value === 5 ? "0.95rem" : "0.85rem",
             color: "var(--primary-text)",
             fontFamily: "Gill Sans, sans-serif",
             "&.Mui-selected": { color: "var(--primary-text-dark)" },
@@ -72,7 +70,7 @@ export const TabContainer = () => {
             to="/career"
             sx={{
               fontWeight: value === 1 ? "bold" : "normal",
-              fontSize: value === 1 ? "0.95rem" : "0.8rem",
+              fontSize: value === 1 ? "0.95rem" : "0.85rem",
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
@@ -88,7 +86,7 @@ export const TabContainer = () => {
             to="/projects"
             sx={{
               fontWeight: value === 2 ? "bold" : "normal",
-              fontSize: value === 2 ? "0.95rem" : "0.8rem",
+              fontSize: value === 2 ? "0.95rem" : "0.85rem",
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
@@ -103,8 +101,8 @@ export const TabContainer = () => {
             component={Link}
             to="/writeups"
             sx={{
-              fontWeight: value === 4 ? "bold" : "normal",
-              fontSize: value === 4 ? "0.95rem" : "0.8rem",
+              fontWeight: value === 3 ? "bold" : "normal",
+              fontSize: value === 3 ? "0.95rem" : "0.85rem",
               color: "var(--primary-text)",
               fontFamily: "Gill Sans, sans-serif",
               "&.Mui-selected": { color: "var(--primary-text-dark)" },
@@ -114,22 +112,6 @@ export const TabContainer = () => {
               },
             }}
           />
-          {/* <Tab
-            label="Hobbies"
-            component={Link}
-            to="/hobbies"
-            sx={{
-              fontWeight: value === 3 ? "bold" : "normal",
-              fontSize: value === 3 ? "0.95rem" : "0.8rem",
-              color: "var(--primary-text)",
-              fontFamily: "Gill Sans, sans-serif",
-              "&.Mui-selected": { color: "var(--primary-text-dark)" },
-              "&:hover": {
-                backgroundColor: "#EAEAE2",
-                borderRadius: "4px",
-              },
-            }}
-          /> */}
         </Tabs>
       </Toolbar>
     </AppBar>

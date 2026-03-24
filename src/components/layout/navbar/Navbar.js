@@ -5,7 +5,7 @@ import { TabContainer } from "../TabContainer";
 
 export const Navbar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar glass-card">
       <button className="hello" onClick={() => {
         window.location.href = "/";
       }}>
@@ -57,6 +57,6 @@ export const Navbar = () => {
           </IconButton>
         </Box>
       </div>
-    </div>
+    </nav>
   );
 };

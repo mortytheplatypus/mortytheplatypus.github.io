@@ -3,6 +3,13 @@ import './Projects.css';
 export const Projects = () => {
   const projects = [
     {
+      title: "RedisPulse",
+      description: "API aggregator using Redis for caching, distributed locks, and background refresh. Handles slow, flaky, and rate-limited data sources with low latency and reliable responses.",
+      tech: ["Redis", "Express.js", "Node.js", "Docker"],
+      github: "https://github.com/mortytheplatypus/RedisPulse",
+      type: "Backend"
+    },
+    {
       title: "JWT Authenticator",
       description: "A full-stack web application template implementing secure user registration, login, and robust authentication flows utilizing JSON Web Tokens (JWT).",
       tech: ["React", "Spring Boot", "Java 17", "PostgreSQL", "JWT"],
@@ -41,7 +48,6 @@ export const Projects = () => {
 
   return (
     <div className="projects-container">
-      <h1>Things I&apos;ve been building</h1>
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.title} className="project-card">

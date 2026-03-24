@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   background-color: var(--primary-bg);
   background-image:
     linear-gradient(var(--accent-color) 1px, transparent 1px),

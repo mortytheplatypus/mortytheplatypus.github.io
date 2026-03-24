@@ -1,6 +1,6 @@
 .projects-container {
   padding: 2rem;
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
 
   /* Restoring the fixed height and scroll */
@@ -27,7 +27,7 @@
 }
 
 .project-card {
-  background-color: var(--secondary-bg);
+  background-color: var(--primary-bg-hover);
   border: 1px solid var(--accent-color);
   border-radius: 12px;
   padding: 1.75rem;
@@ -38,9 +38,8 @@
 /* The Hover Lift */
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
-  border-color: #d1d1d1; /* Slightly darker than accent for contrast */
-  background-color: var(--primary-bg-hover); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.10);
+  border-color: #b1b1b1; /* Slightly darker than accent for contrast */
 }
 
 .project-card-link {
