@@ -3,8 +3,8 @@
   width: 80%;
   margin: 0 auto;
 
-  /* Restoring the fixed height and scroll */
-  height: 80vh; 
+  /* Fill available tab area and keep internal scroll */
+  height: 100%;
   overflow-y: auto; 
   
   /* Adding extra bottom padding so the cards aren't flush against the footer when fully scrolled */
@@ -150,4 +150,20 @@
 }
 .projects-container::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-text);
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    width: 100%;
+    padding: 1rem 0.5rem 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 1.1rem;
+  }
 }

@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   background-color: var(--primary-bg);
   background-image:

@@ -2,7 +2,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  height: calc(80vh);
+  height: 100%;
   overflow-y: auto;
 }
 
@@ -226,6 +226,10 @@
 }
 
 @media (max-width: 768px) {
+  .hobbies-container {
+    padding: 1rem;
+  }
+
   .movie-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;

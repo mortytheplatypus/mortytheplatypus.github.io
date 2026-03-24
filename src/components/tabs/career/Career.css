@@ -2,7 +2,7 @@
   padding: 0;
   width: 80%;
   margin: 0 auto;
-  height: calc(85vh);
+  height: 100%;
   overflow-y: auto;
   border-radius: 15px;
   position: relative;
@@ -525,7 +525,7 @@
 
 @media (max-width: 768px) {
   .academics-container {
-    width: 95%;
+    width: 100%;
     border-radius: 12px;
   }
 
