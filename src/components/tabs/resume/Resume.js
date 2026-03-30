@@ -21,7 +21,7 @@ export default function Resume() {
                 <section className="resume-section">
                     <h3 className="section-title">Skills</h3>
                     <div className="skills-grid">
-                        <div className="skill-category"><strong>Languages:</strong> Java, JavaScript, Go, Python, C/C++, Bash</div>
+                        <div className="skill-category"><strong>Languages:</strong> Java, JavaScript, Python, C/C++, Bash</div>
                         <div className="skill-category"><strong>Frameworks:</strong> Spring Boot, React, Next.js, Express.js, Flask</div>
                         <div className="skill-category"><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Cassandra</div>
                         <div className="skill-category"><strong>Infra:</strong> Nginx, Docker, Kafka, Redis, CDN, RTMP, HLS, Coroot</div>
