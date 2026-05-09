@@ -24,8 +24,8 @@ export default function Resume() {
                         <div className="skill-category"><strong>Languages:</strong> Java, JavaScript, Python, C/C++, Bash</div>
                         <div className="skill-category"><strong>Frameworks:</strong> Spring Boot, React, Next.js, Express.js, Flask</div>
                         <div className="skill-category"><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Cassandra</div>
-                        <div className="skill-category"><strong>Infra:</strong> Nginx, Docker, Kafka, Redis, CDN, RTMP, HLS, Coroot</div>
-                        <div className="skill-category"><strong>Tools/Protocols:</strong> Git, Liquibase, Locust, Websocket, JWT</div>
+                        <div className="skill-category"><strong>Infrastructure:</strong> Nginx, Docker, Kafka, Redis, CDN, RTMP, HLS, Coroot</div>
+                        <div className="skill-category"><strong>Tools/Protocols:</strong> Git, Liquibase, Locust, WebSocket, JWT</div>
                     </div>
                 </section>
 
@@ -43,12 +43,13 @@ export default function Resume() {
                         </div>
                         <p className="experience-summary">Core contributor to <a href="https://convay.com" target="_blank" rel="noreferrer">Convay</a>, a high-scale video conferencing platform.</p>
                         <ul>
-                            <li><strong>Infrastructure Optimization:</strong> Architected an HLS edge-caching strategy that resolved critical bottlenecks where 32-core CPUs were maxing out at 1Gbps; successfully scaled delivery to 10k+ concurrent viewers with near-zero increase in origin load.</li>
-                            <li><strong>Load Testing:</strong> Designed and executed simulations for 12k live WebSocket participants using Locust, identifying and fixing distributed messaging bottlenecks in the Spring Boot/Kafka layer.</li>
-                            <li><strong>Feature Development:</strong> Developed RBAC, scheduling logic, and custom end-to-end messaging protocols for the core meeting engine.</li>
-                            <li><strong>Observability:</strong> Utilized Coroot to monitor system health and proactively debug performance regressions in production.</li>
+                            <li><strong>Infrastructure Optimization:</strong> Contributed to an HLS edge-caching strategy that resolved critical bottlenecks where 32-core CPUs were maxing out at 1Gbps; scaled delivery to 10k+ concurrent viewers with near-zero increase in origin load.</li>
+                            <li><strong>Core Features:</strong> Developed JWT-based authentication and authorization, RBAC, meeting scheduling logic, host-group messaging for private moderator communication, and screen-share video overlay functionality allowing presenters' camera feeds to remain visible during active screen sharing.</li>
+                            <li><strong>Streaming Infrastructure:</strong> Secured HLS playlist access through token-authenticated edge requests and integrated authenticated streaming workflows with Convay Big Meeting. Built RTMP proxy layer with automatic origin failover for resilient live stream ingestion, and implemented concurrent recording support on streaming origins without interrupting active broadcasts.</li>
+                            <li><strong>Load Testing:</strong> Designed and developed Locust-based simulations of real browser HLS behaviour, including manifest polling and segment downloads, successfully validating streaming performance for 10k+ concurrent viewers.</li>
+                            <li><strong>Observability & Deployment:</strong> Utilized monitoring tools like Coroot to monitor system health and diagnose production performance regressions. Also managed deployment and maintenance of services in development environments using Docker, systemd services, and Nginx reverse proxies.</li>
                         </ul>
-                        <p className="tech-stack"><strong>Tech Stack:</strong> Spring Boot, React, Kafka, Docker, Nginx, Cassandra, MySQL, Liquibase</p>
+                        <p className="tech-stack"><strong>Tech Stack:</strong> Spring Boot, React, Kafka, Docker, Nginx, Cassandra, MySQL, Liquibase, Locust, Coroot, RTMP</p>
                     </div>
 
                     <div className="experience-item">
@@ -59,12 +60,14 @@ export default function Resume() {
                             </div>
                             <span className="date">Dec 2023 — May 2024</span>
                         </div>
-                        <p className="experience-summary">Lead the frontend development and UI/UX design for this AI-driven interview preparation platform.</p>
+                        <p className="experience-summary">Led frontend development and UI/UX design for this AI-driven interview preparation platform.</p>
                         <ul>
-                            <li><strong>Core User Journey:</strong> Developed a multi-step flow for interviewer selection, resume uploading, and targeted role tracking.</li>
-                            <li><strong>Dashboards & Analytics:</strong> Developed interactive user portals to manage saved jobs, track interview histories, and visualize actionable post-interview feedback via dynamic charts and gamified metrics.</li>
+                            <li><strong>Product & UX Collaboration:</strong> Worked closely with leadership on product flows, UX decisions, and interface design across core platform experiences.</li>
+                            <li><strong>Core User Journey:</strong> Developed multi-step onboarding and interview preparation flows covering interviewer selection, resume uploads, and targeted role tracking.</li>
+                            <li><strong>Dashboards & Analytics:</strong> Built interactive user portals for saved job management, interview history tracking, and visualization of post-interview feedback through dynamic charts and gamified metrics.</li>
+                            <li><strong>Monitoring:</strong> Integrated monitoring tools like Sentry for frontend error tracking and production issue monitoring.</li>
                         </ul>
-                        <p className="tech-stack"><strong>Tech Stack:</strong> React, Next.js, TypeScript, Tailwind CSS, Recharts</p>
+                        <p className="tech-stack"><strong>Tech Stack:</strong> React, Next.js, TypeScript, Tailwind CSS, Sentry</p>
                     </div>
 
                     <div className="experience-item">
@@ -75,10 +78,10 @@ export default function Resume() {
                             </div>
                             <span className="date">May 2023 — June 2023</span>
                         </div>
-                        <p className="experience-summary">Developed a real-time health analytics dashboard to visualize hospital data trends.</p>
+                        <p className="experience-summary">Built a real-time health analytics dashboard to visualize hospital data trends.</p>
                         <ul>
-                            <li>Processed multi-dimensional health datasets to identify regional and seasonal disease outbreaks based on patient demographics (age, gender, location).</li>
-                            <li>Built a full-stack application using Flask and Angular to provide hospital administrators with actionable insights into operational overhead.</li>
+                            <li>Aggregated and explored multi-dimensional patient records to surface regional and seasonal disease patterns by demographics (age, gender, location).</li>
+                            <li>Delivered a Flask and Angular full-stack app with PostgreSQL-backed reporting so administrators could monitor workload and outbreak signals from a single interface.</li>
                         </ul>
                         <p className="tech-stack"><strong>Tech Stack:</strong> Flask, Angular, PostgreSQL</p>
                     </div>
@@ -90,10 +93,10 @@ export default function Resume() {
                     
                     <div className="project-item">
                         <div className="project-header">
-                            <h4>Jwt Authenticator <span className="project-links">(<a href="https://github.com/mortytheplatypus/jwt-authenticator">GitHub</a>)</span></h4>
+                            <h4>JWT Authenticator <span className="project-links">(<a href="https://github.com/mortytheplatypus/jwt-authenticator">GitHub</a>)</span></h4>
                             <span className="tech-tags">PostgreSQL, Spring Boot</span>
                         </div>
-                        <p>Developed a reusable full-stack authentication template providing secure registration and session management using JSON Web Tokens (JWT), designed for rapid integration into new web applications.</p>
+                        <p>Reusable Spring Boot + PostgreSQL auth starter: registration/login, JWT-backed sessions, and layout intended for reuse when spinning up new services.</p>
                     </div>
 
                     <div className="project-item">
@@ -115,9 +118,9 @@ export default function Resume() {
                     <div className="project-item">
                         <div className="project-header">
                             <h4>Fantasy Premier League <span className="project-links">(<a href="https://github.com/mortytheplatypus/FantasyPremierLeagueCSE216">GitHub</a>)</span></h4>
-                            <span className="tech-tags">PLSQL, React, Express.js</span>
+                            <span className="tech-tags">PL/SQL, React, Express.js</span>
                         </div>
-                        <p>Replicating Fantasy Premier League, which allows users to create fantasy football teams, select players, and compete in leagues.</p>
+                        <p>Fantasy-football style league app: squads, transfers, and competition flows with an Oracle/PL/SQL data layer and a React + Express.js client/API.</p>
                     </div>
                 </section>
 
@@ -130,7 +133,7 @@ export default function Resume() {
                             <h5>BSc in CSE</h5>
                             <p className="date">2019 — 2024</p>
                             <p><strong>CGPA:</strong> 3.48/4.00</p>
-                            <p><strong>Thesis:</strong> Handwritten Bangla Character Recognition Using Convolutional Neural Networks (CNN)</p>
+                            <p><strong>Thesis:</strong> Bangla Document Digitization using CNN</p>
                         </div>
                     </section>
 
@@ -138,7 +141,7 @@ export default function Resume() {
                         <h3 className="section-title">Others</h3>
                         <ul className="others-list">
                             <li>Fluent in Bengali and English</li>
-                            <li>Senior Member and Mentor in Dinajpur Math Club</li>
+                            <li>Senior member and mentor, Dinajpur Math Club: workshops, contests, and peer coaching for secondary students</li>
                         </ul>
                     </section>
                 </div>
