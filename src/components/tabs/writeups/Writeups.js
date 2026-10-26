@@ -39,6 +39,20 @@ export const Writeups = () => {
       link: `${NOTION_BASE_URL}/Spring-Boot-Profiling-f6cce511e83a41ada33e5e98f3d8124e`,
       tags: ["Spring Boot", "Java", "Backend"],
     },
+    {
+      id: 5,
+      title: "Who Gets the Last Ticket?",
+      description: "A dive into pessimistic and optimistic locking in SQL databases",
+      link: `${NOTION_BASE_URL}/Who-Gets-the-Last-Ticket-3b55ba87cb0b80ff8062c401f32dd3e0?source=copy_link`,
+      tags: ["SQL", "Pessimistic Locking", "Optimistic Locking", "Backend"],
+    },
+    {
+      id: 6,
+      title: "Docker Misbehaving (?!)",
+      description: "Debugging why Docker Compose replaces one container with the another with different configurations",
+      link: `${NOTION_BASE_URL}/Docker-Misbehaving-3f75ba87cb0b8092bd6bf0d50fa3303e`,
+      tags: ["Docker", "Containerization", "Backend"],
+    },
   ];
 
   return (
