@@ -152,6 +152,27 @@
     color: var(--secondary-text);
 }
 
+.experience-header h5.role {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+}
+
+.experience-header h5.role-previous {
+    margin-top: 0.1rem;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.role-date {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
+    white-space: nowrap;
+    color: var(--secondary-text);
+    opacity: 0.8;
+}
+
 .date {
     font-size: 0.9rem;
     color: var(--secondary-text);
