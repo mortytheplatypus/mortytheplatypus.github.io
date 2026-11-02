@@ -1,0 +1,147 @@
+\documentclass[9pt]{developercv} 
+\usepackage{multicol}
+\setlength{\columnsep}{0mm}
+
+\begin{document}
+
+%	TITLE AND CONTACT INFORMATION
+\begin{minipage}[t]{0.42\textwidth}
+	\vspace{-\baselineskip} 
+	
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Al Amru Bil Maruf}}}}
+	
+	\vspace{6pt}
+	
+	{\Large Software Engineer II} 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth} 
+	\vspace{-\baselineskip} 
+	
+    \icon{Phone}{11}{+8801788268495} \\
+    \icon{MapMarker}{11}{Dhaka, Bangladesh} \\
+    \icon{Github}{11}{\href{https://github.com/mortytheplatypus}{mortytheplatypus}} \\
+	
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth}
+	\vspace{-\baselineskip}
+	
+	\icon{Envelope}{11}{\href{mailto:alamrubilmaruf412@gmail.com}{alamrubilmaruf412@gmail.com}} \\	
+    \icon{Globe}{11}{\href{https://mortytheplatypus.github.io/}{mortytheplatypus.github.io}} \\
+    \icon{Linkedin}{11}{\href{https://www.linkedin.com/in/mortytheplatypus/}{linkedin.com/in/mortytheplatypus}} \\
+    
+\end{minipage}
+
+%	SUMMARY
+\cvsect{Summary}
+Backend engineer with 2+ years at Synesis IT, mostly in Java/Spring Boot and Go. I am one of main contributors to the live-streaming backend for Convay, load-tested at 10k concurrent viewers. Most of my work is about keeping services correct under load: locking, caching, message queues and load tests.
+
+%	SKILLS
+\cvsect{Skills}
+\vspace{-6pt}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Languages:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{Java, Go, Python, JavaScript, TypeScript, SQL, C++, Bash}}
+\end{minipage}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Backend:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{Spring Boot, Express.js, Flask, REST, WebSocket/STOMP, JWT}}
+\end{minipage}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Data/Messaging:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{MySQL, PostgreSQL, Cassandra, MongoDB, Redis, Kafka, RabbitMQ}}
+\end{minipage}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Infra/Tools:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{Docker, Nginx, Cloudflare R2/CDN, HLS, RTMP, Eureka, Consul, Liquibase, Locust, Prometheus, Coroot, Git}}
+\end{minipage}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \textbf{Frontend:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.8\textwidth}
+  {\large \texttt{React, Next.js}}
+\end{minipage}
+
+%	EXPERIENCE
+\cvsect{Experience}
+\begin{entrylist}
+    \entry
+        {June 2024 \\ onwards}
+        {Synesis IT PLC}
+        {Software Engineer II}
+        {Software engineer on \href{https://convay.com}{Convay}, a video conferencing platform. One of the main contributors to the services behind large-meeting live streaming.
+        \begin{itemize}\setlength\itemsep{0.05em}
+            \item \textbf{Streaming at Scale:} Designed a gated HLS delivery platform (Spring Boot control plane, Go origins, Cloudflare R2/CDN offload) so live streams scale past a single origin; load-tested at 10k concurrent viewers with ~0\% failures across 188k playlist/segment requests.
+            \item \textbf{Abuse-Resistant Access:} Secured playlists and segments with JWTs and kept the hot path in memory via an ownership cache with a rate-limited DB fallback (30 lookups/min per client), shielding service from forged stream-ID floods.
+            \item \textbf{Race-Safe Allocation:} Sole developer of the service that manages a pool of streaming servers, assigning one per live stream and releasing it when the stream ends. Uses compare-and-set allocation with retries so concurrent meetings never get the same server, rotates the stream keys on every assignment, and runs scheduled checks that return stale servers to the pool.
+            \item \textbf{Realtime Messaging:} Built chat and presence services on Kafka, Cassandra, Redis and RabbitMQ. Presence updates go out in 3s batches and user lists are capped, which held up in soak tests with 4k WebSocket connections per instance.
+            \item \textbf{Meeting Features:} Built hosts-only group messaging across the XMPP signaling layer (Prosody), client SDK and web UI, with history replay so late joiners and newly promoted hosts catch up. Also added a picture-in-picture overlay for screen-share video.
+            \item \textbf{Usage Billing:} Wrote the billing service that pulls viewer analytics data from Cloudflare Analytics in windows and backfills any window that fails.
+        \end{itemize}
+        \textbf{Tech Stack:} {\large \texttt{Java, Spring Boot, Go, Kafka, Cassandra, Redis, RabbitMQ, MySQL, Docker, Cloudflare R2, Locust, Prometheus, Coroot}}
+        }
+\end{entrylist}
+\begin{entrylist}
+	\entry
+        {May 2023 --- \\ June 2023}
+		{MYSOFT LIMITED}
+		{Health Analytics Intern}
+		{Built a Flask, Angular and PostgreSQL dashboard showing regional and seasonal disease trends in hospital data, broken down by age, gender and location.}
+\end{entrylist}
+
+%	PROJECTS
+\cvsect{Projects}
+\begin{entrylist}
+    \entry
+        {\texttt{Go}}
+		{Gozzle}
+		{{\href{https://github.com/mortytheplatypus/gozzle}{GitHub}}}
+		{Log ingestion service. Each service gets its own write-ahead log, and writes go through bounded queues that push back when full. Supports offset-based reads, live tailing over SSE, and log rotation and retention.}
+    \entry
+		{\texttt{PostgreSQL} \\ \texttt{Spring Boot}}
+		{JWT Authenticator}
+		{{\href{https://github.com/mortytheplatypus/JWT-authenticator}{GitHub}}}
+		{Registration and JWT session handling, built as a starting point for new web apps.}
+    \entry
+		{\texttt{Flask} \\ \texttt{React}}
+		{Pasteruf}
+		{{\href{https://github.com/mortytheplatypus/pasteruf-backend}{GitHub}}}
+		{A pastebin and URL shortener in one: saves text snippets and redirects short links.}
+\end{entrylist}
+
+\newpage
+
+%	EDUCATION
+\cvsect{Education}
+\begin{entrylist}
+    \entry
+		{2019 --- 2024}
+		{Bangladesh University of Engineering and Technology}
+		{BSc in CSE}
+		{CGPA: 3.48/4.00}
+\end{entrylist}
+
+%	OTHERS
+\cvsect{Others}
+    \qquad  - Languages: Bengali, English (fluent) \\
+    \qquad  - Senior Member and Mentor, Dinajpur Math Club 
+
+\end{document}
