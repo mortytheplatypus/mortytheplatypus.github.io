@@ -9,7 +9,7 @@ export const Navbar = () => {
       <button className="hello" onClick={() => {
         window.location.href = "/";
       }}>
-        mortytheplatypus
+        Al Amru Bil Maruf
       </button>
 
       <div className="tabs">

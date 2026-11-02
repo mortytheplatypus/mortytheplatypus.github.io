@@ -6,13 +6,14 @@ const experienceData = [
   {
     period: "June 2024 - Present",
     isCurrent: true,
-    position: "Software Engineer",
+    position: "Software Engineer II",
     company: "Synesis IT PLC",
     description:
-      "Core contributor to Convay, a high-scale video conferencing platform. Built performance-sensitive backend and real-time features with a focus on reliability, scalability, and production observability.",
+      "Software engineer on Convay, a video conferencing platform, and one of the main contributors to the services behind large-meeting live streaming: a gated HLS delivery platform load-tested at 10k concurrent viewers, a race-safe streaming server allocator, chat and presence services, and usage billing.",
     techStack: [
+      "Java",
       "Spring Boot",
-      "React",
+      "Go",
       "Docker",
       "WebSocket",
       "Liquibase",
@@ -20,7 +21,10 @@ const experienceData = [
       "Cassandra",
       "Redis",
       "Kafka",
-      "Nginx",
+      "RabbitMQ",
+      "Cloudflare R2",
+      "Prometheus",
+      "Coroot",
     ],
   },
   {
@@ -44,7 +48,7 @@ const experienceData = [
     position: "Health Analytics Intern",
     company: "MYSOFT LIMITED",
     description:
-      "Developed a real-time health analytics dashboard to visualize hospital data trends and help administrators take data-backed operational decisions.",
+      "Built a dashboard showing regional and seasonal disease trends in hospital data, broken down by age, gender and location.",
     techStack: [
       "Flask",
       "Angular",
@@ -55,7 +59,7 @@ const experienceData = [
 
 const educationData = [
   {
-    period: "2019 - 2023",
+    period: "2019 - 2024",
     badgeType: "achievement",
     badgeText: "Bachelor's",
     institution: "Bangladesh University of Engineering and Technology (BUET)",
@@ -93,7 +97,7 @@ const skillsData = [
   {
     category: "Languages",
     icon: "💻",
-    skills: ["Java", "JavaScript", "Go", "Python", "C/C++", "Bash", "TypeScript"],
+    skills: ["Java", "Go", "Python", "JavaScript", "TypeScript", "SQL", "C++", "Bash"],
   },
   {
     category: "Frameworks",
@@ -109,7 +113,7 @@ const skillsData = [
   {
     category: "Databases",
     icon: "🗄️",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "Cassandra"],
+    skills: ["MySQL", "PostgreSQL", "Cassandra", "MongoDB", "Redis"],
   },
   {
     category: "Infrastructure",
@@ -118,18 +122,21 @@ const skillsData = [
       "Nginx",
       "Docker",
       "Kafka",
-      "Redis"
+      "RabbitMQ",
+      "Cloudflare R2/CDN",
+      "Eureka",
+      "Consul",
     ],
   },
   {
     category: "Tools",
     icon: "🛠️",
-    skills: ["Redux", "Tailwind CSS", "Liquibase", "Locust", "FFmpeg", "Coroot"],
+    skills: ["Git", "Liquibase", "Locust", "Prometheus", "Coroot", "Tailwind CSS", "Redux"],
   },
   {
     category: "Communication & Delivery",
     icon: "📡",
-    skills: ["WebSocket", "JWT", "CDN", "RTMP", "HLS"],
+    skills: ["REST", "WebSocket/STOMP", "JWT", "HLS", "RTMP"],
   },
 ];
 

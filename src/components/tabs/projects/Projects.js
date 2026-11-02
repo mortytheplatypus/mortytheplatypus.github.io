@@ -3,6 +3,13 @@ import './Projects.css';
 export const Projects = () => {
   const projects = [
     {
+      title: "Gozzle",
+      description: "Log ingestion service with a write-ahead log per service and bounded queues that push back when full. Supports offset-based reads, live tailing over SSE, and log rotation and retention.",
+      tech: ["Go", "WAL", "SSE"],
+      github: "https://github.com/mortytheplatypus/gozzle",
+      type: "Backend"
+    },
+    {
       title: "RedisPulse",
       description: "API aggregator using Redis for caching, distributed locks, and background refresh. Handles slow, flaky, and rate-limited data sources with low latency and reliable responses.",
       tech: ["Redis", "Express.js", "Node.js", "Docker"],
@@ -11,14 +18,14 @@ export const Projects = () => {
     },
     {
       title: "JWT Authenticator",
-      description: "A full-stack web application template implementing secure user registration, login, and robust authentication flows utilizing JSON Web Tokens (JWT).",
+      description: "Registration and JWT session handling, built as a starting point for new web apps.",
       tech: ["React", "Spring Boot", "Java 17", "PostgreSQL", "JWT"],
       github: "https://github.com/mortytheplatypus/jwt-authenticator",
       type: "Full Stack"
     },
     {
       title: "Pasteruf",
-      description: "A Pastebin-style web application enabling users to seamlessly share code and text snippets, featuring automatic redirection for customized, shortened URLs.",
+      description: "A pastebin and URL shortener in one: saves text snippets and redirects short links.",
       tech: ["React", "Flask", "Python", "PostgreSQL"],
       github: "https://github.com/mortytheplatypus/pasteruf",
       type: "Full Stack"

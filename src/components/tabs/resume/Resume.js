@@ -17,15 +17,21 @@ export default function Resume() {
                     </div>
                 </header>
 
+                {/* SUMMARY */}
+                <section className="resume-section">
+                    <h3 className="section-title">Summary</h3>
+                    <p>Backend engineer with 2+ years at Synesis IT, mostly in Java/Spring Boot and Go. I am one of main contributors to the live-streaming backend for Convay, load-tested at 10k concurrent viewers. Most of my work is about keeping services correct under load: locking, caching, message queues and load tests.</p>
+                </section>
+
                 {/* SKILLS */}
                 <section className="resume-section">
                     <h3 className="section-title">Skills</h3>
                     <div className="skills-grid">
-                        <div className="skill-category"><strong>Languages:</strong> Java, JavaScript, Go, Python, C/C++, Bash</div>
-                        <div className="skill-category"><strong>Frameworks:</strong> Spring Boot, React, Next.js, Express.js (NodeJS), Flask</div>
-                        <div className="skill-category"><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Cassandra</div>
-                        <div className="skill-category"><strong>Infrastructure:</strong> Nginx, Docker, Kafka, Redis, RabbitMQ, CDN, RTMP, HLS, Cloudflare R2</div>
-                        <div className="skill-category"><strong>Tools/Protocols:</strong> Git, Liquibase, Locust, WebSocket, XMPP, JWT, Eureka, Consul</div>
+                        <div className="skill-category"><strong>Languages:</strong> Java, Go, Python, JavaScript, TypeScript, SQL, C++, Bash</div>
+                        <div className="skill-category"><strong>Backend:</strong> Spring Boot, Express.js, Flask, REST, WebSocket/STOMP, JWT</div>
+                        <div className="skill-category"><strong>Data/Messaging:</strong> MySQL, PostgreSQL, Cassandra, MongoDB, Redis, Kafka, RabbitMQ</div>
+                        <div className="skill-category"><strong>Infra/Tools:</strong> Docker, Nginx, Cloudflare R2/CDN, HLS, RTMP, Eureka, Consul, Liquibase, Locust, Prometheus, Coroot, Git</div>
+                        <div className="skill-category"><strong>Frontend:</strong> React, Next.js</div>
                     </div>
                 </section>
 
@@ -37,20 +43,20 @@ export default function Resume() {
                         <div className="experience-header">
                             <div>
                                 <h4>Synesis IT PLC</h4>
-                                <h5 className="role">Software Engineer II <span className="role-date">June 2026 - Present</span></h5>
-                                <h5 className="role role-previous">Software Engineer I <span className="role-date">June 2024 - May 2026</span></h5>
+                                <h5 className="role">Software Engineer II</h5>
                             </div>
                             <span className="date">June 2024 — Present</span>
                         </div>
-                        <p className="experience-summary">Core contributor to <a href="https://convay.com" target="_blank" rel="noreferrer">Convay</a>, a high-scale video conferencing platform.</p>
+                        <p className="experience-summary">Software engineer on <a href="https://convay.com" target="_blank" rel="noreferrer">Convay</a>, a video conferencing platform. One of the main contributors to the services behind large-meeting live streaming.</p>
                         <ul>
-                            <li><strong>Streaming at Scale:</strong> Designed a gated multi-origin HLS platform (control plane, race-safe origin pool, Cloudflare R2 offload) so live delivery scales past origin limits--JWT playlist/segment auth and abuse-resistant ownership caching under CDN load; Locust-validated at 10k concurrent viewers with near-zero playlist failure on healthy paths.</li>
-                            <li><strong>Realtime Messaging:</strong> Built Spring Boot chat microservices on Kafka, Cassandra, and Redis with presence batching and WebSocket fan-out for multi-thousand concurrent participants; soak-tested to 4k STOMP connections per instance.</li>
-                            <li><strong>Webinar Protocol:</strong> Shipped hosts-only guest messaging end-to-end across the signaling layer, realtime client SDK, and web UI, including history replay so late joiners and promoted hosts stay in sync in large rooms.</li>
-                            <li><strong>Meeting Orchestration:</strong> Developed big-meeting livestream initiation with single-flight concurrency control, streaming origin pool acquire/release and failover, and HMAC-signed enterprise guest join links.</li>
-                            <li><strong>Usage Billing:</strong> Built a Cloudflare Analytics pipeline that aggregates concurrent viewers and viewer-minutes on lagged sync windows, with failure backfill and VOD delivery metrics for stream monetization.</li>
+                            <li><strong>Streaming at Scale:</strong> Designed a gated HLS delivery platform (Spring Boot control plane, Go origins, Cloudflare R2/CDN offload) so live streams scale past a single origin; load-tested at 10k concurrent viewers with ~0% failures across 188k playlist/segment requests.</li>
+                            <li><strong>Abuse-Resistant Access:</strong> Secured playlists and segments with JWTs and kept the hot path in memory via an ownership cache with a rate-limited DB fallback (30 lookups/min per client), shielding service from forged stream-ID floods.</li>
+                            <li><strong>Race-Safe Allocation:</strong> Sole developer of the service that manages a pool of streaming servers, assigning one per live stream and releasing it when the stream ends. Uses compare-and-set allocation with retries so concurrent meetings never get the same server, rotates the stream keys on every assignment, and runs scheduled checks that return stale servers to the pool.</li>
+                            <li><strong>Realtime Messaging:</strong> Built chat and presence services on Kafka, Cassandra, Redis and RabbitMQ. Presence updates go out in 3s batches and user lists are capped, which held up in soak tests with 4k WebSocket connections per instance.</li>
+                            <li><strong>Meeting Features:</strong> Built hosts-only group messaging across the XMPP signaling layer (Prosody), client SDK and web UI, with history replay so late joiners and newly promoted hosts catch up. Also added a picture-in-picture overlay for screen-share video.</li>
+                            <li><strong>Usage Billing:</strong> Wrote the billing service that pulls viewer analytics data from Cloudflare Analytics in windows and backfills any window that fails.</li>
                         </ul>
-                        <p className="tech-stack"><strong>Tech Stack:</strong> Spring Boot, Go, React, Kafka, Cassandra, Redis, MySQL, Docker, Cloudflare R2, Locust</p>
+                        <p className="tech-stack"><strong>Tech Stack:</strong> Java, Spring Boot, Go, Kafka, Cassandra, Redis, RabbitMQ, MySQL, Docker, Cloudflare R2, Locust, Prometheus, Coroot</p>
                     </div>
 
                     <div className="experience-item">
@@ -61,11 +67,7 @@ export default function Resume() {
                             </div>
                             <span className="date">May 2023 — June 2023</span>
                         </div>
-                        <p className="experience-summary">Developed a real-time health analytics dashboard to visualize hospital data trends.</p>
-                        <ul>
-                            <li>Processed multi-dimensional health datasets to identify regional and seasonal disease outbreaks based on patient demographics (age, gender, location).</li>
-                            <li>Built a full-stack application using Flask and Angular to provide hospital administrators with actionable insights into operational overhead.</li>
-                        </ul>
+                        <p className="experience-summary">Built a Flask, Angular and PostgreSQL dashboard showing regional and seasonal disease trends in hospital data, broken down by age, gender and location.</p>
                         <p className="tech-stack"><strong>Tech Stack:</strong> Flask, Angular, PostgreSQL</p>
                     </div>
                 </section>
@@ -79,23 +81,15 @@ export default function Resume() {
                             <h4>Gozzle <span className="project-links">(<a href="https://github.com/mortytheplatypus/gozzle">GitHub</a>)</span></h4>
                             <span className="tech-tags">Go</span>
                         </div>
-                        <p>A log-ingestion service with per-service WAL storage, bounded async queues with backpressure, offset-based reads, SSE live tailing, log rotation and retention.</p>
+                        <p>Log ingestion service. Each service gets its own write-ahead log, and writes go through bounded queues that push back when full. Supports offset-based reads, live tailing over SSE, and log rotation and retention.</p>
                     </div>
 
                     <div className="project-item">
                         <div className="project-header">
-                            <h4>JWT Authenticator <span className="project-links">(<a href="https://github.com/mortytheplatypus/jwt-authenticator">GitHub</a>)</span></h4>
+                            <h4>JWT Authenticator <span className="project-links">(<a href="https://github.com/mortytheplatypus/JWT-authenticator">GitHub</a>)</span></h4>
                             <span className="tech-tags">PostgreSQL, Spring Boot</span>
                         </div>
-                        <p>Reusable Spring Boot + PostgreSQL auth starter: registration/login, JWT-backed sessions, and layout intended for reuse when spinning up new services.</p>
-                    </div>
-
-                    <div className="project-item">
-                        <div className="project-header">
-                            <h4>Find My Apartment <span className="project-links">(<a href="https://github.com/mortytheplatypus/find-my-apartment-api">Backend</a> | <a href="https://github.com/mortytheplatypus/find-my-apartment-frontend">Frontend</a>)</span></h4>
-                            <span className="tech-tags">Next.js, Express.js</span>
-                        </div>
-                        <p>Built an apartment-search platform with advanced filtering, personalized recommendation logic, and integrated map views for enhanced user experience.</p>
+                        <p>Registration and JWT session handling, built as a starting point for new web apps.</p>
                     </div>
 
                     <div className="project-item">
@@ -103,15 +97,7 @@ export default function Resume() {
                             <h4>Pasteruf <span className="project-links">(<a href="https://github.com/mortytheplatypus/pasteruf-backend">GitHub</a>)</span></h4>
                             <span className="tech-tags">Flask, React</span>
                         </div>
-                        <p>Engineered a dual-purpose platform for persistent text storage and URL shortening. Features automatic redirection logic and a streamlined interface for sharing content across platforms.</p>
-                    </div>
-
-                    <div className="project-item">
-                        <div className="project-header">
-                            <h4>Fantasy Premier League <span className="project-links">(<a href="https://github.com/mortytheplatypus/FantasyPremierLeagueCSE216">GitHub</a>)</span></h4>
-                            <span className="tech-tags">PL/SQL, React, Express.js</span>
-                        </div>
-                        <p>Replica of Fantasy Premier League, which allows users to create fantasy football teams, select players, and compete in leagues.</p>
+                        <p>A pastebin and URL shortener in one: saves text snippets and redirects short links.</p>
                     </div>
                 </section>
 
@@ -124,8 +110,7 @@ export default function Resume() {
                             <h5>BSc in CSE</h5>
                             <p className="date">2019 — 2024</p>
                             <p><strong>CGPA:</strong> 3.48/4.00</p>
-                            <p><strong>Thesis:</strong> Handwritten Bangla Character Recognition Using Convolutional Neural Networks (CNN)</p>
-                        </div>
+                                                    </div>
                     </section>
 
                     <section className="resume-section flex-1">

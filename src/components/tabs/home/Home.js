@@ -10,8 +10,8 @@ export const Home = () => {
           <h1>Hey, there! This is Al Amru Bil Maruf!</h1>
 
           <p>
-            I am a full-stack developer based in Dhaka, Bangladesh. My work domain currently revolves around developing video conferincing solutions. I am open for collaborative research work.
-            I am constantly trying to learn new technologies and best practices. My core focus is on creating efficient, maintainable and scalable code.
+            I am a backend engineer based in Dhaka, Bangladesh, working mostly in Java/Spring Boot and Go. I am a main contributor to the live-streaming backend of Convay, a video conferencing platform, load-tested at 10k concurrent viewers.
+            Most of my work is about keeping services correct under load: locking, caching, message queues and load tests. I am open for collaborative research work.
           </p>
 
           <p>
