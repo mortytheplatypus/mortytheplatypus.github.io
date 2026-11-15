@@ -363,13 +363,13 @@ requestAnimationFrame(frame);
 <h2>Things that break in Production</h2>
 <div class="grid4">
 <div class="card fragment"><p class="num">01</p><h3>Connection limits</h3><p class="desc">The pool runs out. “Correct” code still fails.</p><p class="tag">→ SQL &amp; databases</p></div>
-<div class="card fragment"><p class="num">02</p><h3>The double payment</h3><p class="desc">The same request arrives twice. Did you charge twice?</p><p class="tag">→ Idempotency</p></div>
+<div class="card fragment"><p class="num">02</p><h3>Resource spikes</h3><p class="desc">Memory creeps, logs fill the disk, one loop pins the CPU.</p><p class="tag">→ Resource Limits</p></div>
 <div class="card fragment"><p class="num">03</p><h3>Attacks</h3><p class="desc">Bots start probing within hours of going live.</p><p class="tag">→ Networking</p></div>
-<div class="card fragment"><p class="num">04</p><h3>Monitoring</h3><p class="desc">Know it’s broken before your users tell you.</p><p class="tag">→ Logs &amp; alerts</p></div>
+<div class="card fragment"><p class="num">04</p><h3>Monitoring</h3><p class="desc">Know it’s broken before your users tell you.</p><p class="tag">→ Logs &amp; Alerts</p></div>
 </div>
 <div class="spacer"></div>
 <p class="body">Plus availability, testing, maintainability. None of it is in the tutorial. All of it is the job.</p>
-<aside>Each card appears on a click. One: the database only holds so many connections; at 10k every request wants one, the pool runs out, and correct code fails. Know what an index does, what a slow query costs, what a transaction locks. Two: user clicks Pay, network is slow, they click again or the phone retries. Same request twice. Handling it safely is idempotency; wrong means real people lose real money. Three: bots probe within hours; brute force, injection, floods. You can't defend what you don't understand: HTTP, ports, how requests travel, TLS. Four: if your first alert is an angry customer, you're late. Logs, metrics and alerts are part of the system.</aside>
+<aside>Each card appears on a click. One: the database only holds so many connections; at 10k every request wants one, the pool runs out, and correct code fails. Know what an index does, what a slow query costs, what a transaction locks. Two: memory, disk and CPU are finite. A small leak grows until the process is killed, logs and uploads fill the disk and writes fail, one hot loop or slow query pins every core. It runs fine for hours, then dies. Profile, rotate logs, set limits. Three: bots probe within hours; brute force, injection, floods. You can't defend what you don't understand: HTTP, ports, how requests travel, TLS. Four: if your first alert is an angry customer, you're late. Logs, metrics and alerts are part of the system.</aside>
 </section>
 <section id="dsa" data-transition="fade">
 <h2>A loop inside a loop, O(n²), hides at small scale</h2>
