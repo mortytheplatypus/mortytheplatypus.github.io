@@ -16,6 +16,10 @@ export const Body = () => {
         <Route path="/resume" element={<Resume />} />
         <Route path="/career" element={<Career />} />
         <Route path="/projects" element={<Projects />} />
+        <Route
+          path="/career-talk"
+          element={<iframe title="Career Talk" src={`${process.env.PUBLIC_URL}/assets/career-talk.html`} style={{ position: 'fixed', inset: 0, width: '100vw', height: '100vh', border: 0, zIndex: 1300 }} />}
+        />
         {/* <Route path="/hobbies" element={<Hobbies />} /> */}
         <Route path="/writeups" element={<Writeups />} />
       </Routes>

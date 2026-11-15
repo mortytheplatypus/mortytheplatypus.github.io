@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Writeups.css';
 
 const NOTION_BASE_URL = "https://mortytheplatypus.notion.site";
@@ -11,6 +12,14 @@ const ExternalLinkIcon = () => (
 
 export const Writeups = () => {
   const articles = [
+    {
+      id: 7,
+      title: "Career Talk",
+      description: "Slides from my career talk",
+      link: "/career-talk",
+      internal: true,
+      tags: ["Career", "Talk"],
+    },
     {
       id: 5,
       title: "Who Gets the Last Ticket?",
@@ -58,11 +67,14 @@ export const Writeups = () => {
   return (
     <div className="writeups-container">
       <div className="articles-grid">
-        {articles.map((article, index) => (
-          <a
-            href={article.link}
-            target="_blank"
-            rel="noopener noreferrer"
+        {articles.map((article, index) => {
+          const Card = article.internal ? Link : 'a';
+          const linkProps = article.internal
+            ? { to: article.link }
+            : { href: article.link, target: "_blank", rel: "noopener noreferrer" };
+          return (
+          <Card
+            {...linkProps}
             className="article-card"
             title={article.link}
             key={article.id}
@@ -88,8 +100,9 @@ export const Writeups = () => {
                 <ExternalLinkIcon />
               </div>
             </div>
-          </a>
-        ))}
+          </Card>
+          );
+        })}
       </div>
     </div>
   );
